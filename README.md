@@ -9,4 +9,4 @@ If you're interested in the package management side of things with Stow, checkou
 
 ## install
 I told you it was simple. Don't believe me?
-`git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow  
+`git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow `
