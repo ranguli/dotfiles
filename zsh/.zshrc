@@ -8,8 +8,6 @@
 #    Author: ranguli
 #    GitHub: www.github.com/ranguli/dotfiles
 #    2017
-#
-
 
 
 # If you come from bash you might have to change your $PATH.
