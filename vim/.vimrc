@@ -1,3 +1,16 @@
+"                    
+"          (_)                   
+"    __   ___ _ __ ___  _ __ ___ 
+"    \ \ / / | '_ ` _ \| '__/ __|
+"     \ V /| | | | | | | | | (__ 
+"      \_/ |_|_| |_| |_|_|  \___|
+"                            
+"    Author: ranguli
+"    GitHub: www.github.com/ranguli/dotfiles
+"    2017
+"
+"
+
 "Sets"
 set nocompatible                " be iMproved, required 
 set t_Co=256
