@@ -13,7 +13,7 @@ Acquire and move into the git repository, then stow all the files with:
 `git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow `
 
 
-### Common Installation Errors
+### Troubleshooting
 
 **Tip:** *Stow will get confused if it sees existing dotfiles on your system.* Here's an example warning of trying to stow a dotfile when one of the same name already exists on our system.
 
