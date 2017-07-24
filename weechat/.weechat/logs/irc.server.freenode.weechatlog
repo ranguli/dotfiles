@@ -1,0 +1,126 @@
+2017-07-19 13:40:19	--	irc: connecting to server irc.freenode.net/6667...
+2017-07-19 13:40:20	--	irc: connected to irc.freenode.net/6667 (81.18.73.123)
+2017-07-19 13:40:20	--	hobana.freenode.net: *** Looking up your hostname...
+2017-07-19 13:40:21	--	hobana.freenode.net: *** Checking Ident
+2017-07-19 13:40:21	--	hobana.freenode.net: *** Your hostname is too long, ignoring hostname
+2017-07-19 13:40:30	--	hobana.freenode.net: *** No Ident response
+2017-07-19 13:40:30	--	Welcome to the freenode Internet Relay Chat Network ranguli
+2017-07-19 13:40:30	--	Your host is hobana.freenode.net[81.18.73.123/6667], running version ircd-seven-1.1.4
+2017-07-19 13:40:30	--	This server was created Fri Jan 13 2017 at 00:03:11 UTC
+2017-07-19 13:40:30	--	hobana.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-19 13:40:30	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-19 13:40:30	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 ETRACE WHOX SAFELIST :are supported by this server
+2017-07-19 13:40:30	--	ELIST=CTU KNOCK CPRIVMSG CNOTICE :are supported by this server
+2017-07-19 13:40:30	--	There are 123 users and 91671 invisible on 29 servers
+2017-07-19 13:40:30	--	29 :IRC Operators online
+2017-07-19 13:40:30	--	41 :unknown connection(s)
+2017-07-19 13:40:30	--	50689 :channels formed
+2017-07-19 13:40:30	--	I have 5180 clients and 1 servers
+2017-07-19 13:40:30	--	5180 12000 :Current local users 5180, max 12000
+2017-07-19 13:40:30	--	91794 97718 :Current global users 91794, max 97718
+2017-07-19 13:40:30	--	Highest connection count: 12001 (12000 clients) (1247387 connections received)
+2017-07-19 13:40:30	--	- hobana.freenode.net Message of the Day -
+2017-07-19 13:40:30	--	- Welcome to hobana.freenode.net in Bucharest, Romania! Thank
+2017-07-19 13:40:30	--	- you to RCS-RDS for sponsoring this server!
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- Ion Hobana (1931-2011) was a Romanian science fiction writer,
+2017-07-19 13:40:30	--	- literary critic and ufologist. Ion Hobana is a literary
+2017-07-19 13:40:30	--	- pseudonym, the writer's real name being Aurelian Manta Rosie.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- Welcome to freenode - supporting the free and open source
+2017-07-19 13:40:30	--	- software communities since 1998.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- By connecting to freenode you indicate that you have read and
+2017-07-19 13:40:30	--	- accept our policies as set out on http://www.freenode.net
+2017-07-19 13:40:30	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-19 13:40:30	--	- any network-related questions or queries, where a number of
+2017-07-19 13:40:30	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-19 13:40:30	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-19 13:40:30	--	- real-life collaboration.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- We would like to thank Private Internet Access
+2017-07-19 13:40:30	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-19 13:40:30	--	- organisations that help keep freenode and our other projects
+2017-07-19 13:40:30	--	- running for their sustained support.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- In particular we would like to thank the sponsor
+2017-07-19 13:40:30	--	- of this server, details of which can be found above.
+2017-07-19 13:40:30	--	-
+2017-07-19 13:40:30	--	- By connecting to freenode you indicate that you have read and
+2017-07-19 13:40:30	--	- agree with our policies and guidelines as published on
+2017-07-19 13:40:30	--	- https://freenode.net
+2017-07-19 13:40:30	--	End of /MOTD command.
+2017-07-19 13:40:30	--	User mode [+i] by ranguli
+2017-07-19 13:40:31	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2017-07-19 13:40:42	--	MSG(NickServ): identify ****************
+2017-07-19 13:40:43	--	NickServ (NickServ@services.): You are now identified for ranguli.
+2017-07-19 13:40:46	--	#security: ##security :Forwarding to another channel
+2017-07-19 13:41:04	--	#programming: ##programming :Forwarding to another channel
+2017-07-20 16:55:03	--	irc: connecting to server irc.freenode.net/6667...
+2017-07-20 16:55:04	--	irc: connected to irc.freenode.net/6667 (185.30.166.37)
+2017-07-20 16:55:04	--	verne.freenode.net: *** Looking up your hostname...
+2017-07-20 16:55:04	--	verne.freenode.net: *** Checking Ident
+2017-07-20 16:55:04	--	verne.freenode.net: *** Your hostname is too long, ignoring hostname
+2017-07-20 16:55:11	--	verne.freenode.net: *** No Ident response
+2017-07-20 16:55:11	--	Welcome to the freenode Internet Relay Chat Network ranguli
+2017-07-20 16:55:11	--	Your host is verne.freenode.net[185.30.166.37/6667], running version ircd-seven-1.1.4
+2017-07-20 16:55:11	--	This server was created Sat Jan 7 2017 at 11:53:54 EST
+2017-07-20 16:55:11	--	verne.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-20 16:55:11	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-20 16:55:11	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 ETRACE WHOX KNOCK :are supported by this server
+2017-07-20 16:55:11	--	SAFELIST ELIST=CTU CPRIVMSG CNOTICE :are supported by this server
+2017-07-20 16:55:11	--	There are 126 users and 91442 invisible on 29 servers
+2017-07-20 16:55:11	--	29 :IRC Operators online
+2017-07-20 16:55:11	--	52 :unknown connection(s)
+2017-07-20 16:55:11	--	50790 :channels formed
+2017-07-20 16:55:11	--	I have 5509 clients and 2 servers
+2017-07-20 16:55:11	--	5509 6861 :Current local users 5509, max 6861
+2017-07-20 16:55:11	--	91568 97718 :Current global users 91568, max 97718
+2017-07-20 16:55:11	--	Highest connection count: 6863 (6861 clients) (2150303 connections received)
+2017-07-20 16:55:11	--	- verne.freenode.net Message of the Day -
+2017-07-20 16:55:11	--	- Welcome to verne.freenode.net in Amsterdam, NL.
+2017-07-20 16:55:11	--	- Thanks to http://www.hyperfilter.com/ for sponsoring
+2017-07-20 16:55:11	--	- this server!
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- VERNE, Jules (1828-1905). Born in Nantes, France, Verne was
+2017-07-20 16:55:11	--	- a pioneering french author known for novels such as Twenty
+2017-07-20 16:55:11	--	- Thousand Leagues Under the Sea, A Journey to the Center of the
+2017-07-20 16:55:11	--	- Earth, and Around the World in Eighty Days. Often lauded as the
+2017-07-20 16:55:11	--	- Father of science fiction, Verne wrote about concepts such as
+2017-07-20 16:55:11	--	- space travel, skyscrapers, and worldwide communications
+2017-07-20 16:55:11	--	- networks long before these ideas became popularised or realised.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- Welcome to freenode - supporting the free and open source
+2017-07-20 16:55:11	--	- software communities since 1998.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- By connecting to freenode you indicate that you have read and
+2017-07-20 16:55:11	--	- accept our policies as set out on http://www.freenode.net
+2017-07-20 16:55:11	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-20 16:55:11	--	- any network-related questions or queries, where a number of
+2017-07-20 16:55:11	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-20 16:55:11	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-20 16:55:11	--	- real-life collaboration.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- We would like to thank Private Internet Access
+2017-07-20 16:55:11	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-20 16:55:11	--	- organisations that help keep freenode and our other projects
+2017-07-20 16:55:11	--	- running for their sustained support.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- In particular we would like to thank the sponsor
+2017-07-20 16:55:11	--	- of this server, details of which can be found above.
+2017-07-20 16:55:11	--	-
+2017-07-20 16:55:11	--	- By connecting to freenode you indicate that you have read and
+2017-07-20 16:55:11	--	- agree with our policies and guidelines as published on
+2017-07-20 16:55:11	--	- https://freenode.net
+2017-07-20 16:55:11	--	End of /MOTD command.
+2017-07-20 16:55:11	--	User mode [+i] by ranguli
+2017-07-20 16:55:12	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2017-07-20 16:55:21	--	MSG(NickServ): identify ****************
+2017-07-20 16:55:21	--	NickServ (NickServ@services.): You are now identified for ranguli.
+2017-07-20 16:55:32	--	#security: ##security :Forwarding to another channel
+2017-07-20 16:57:38	--	#linux: ##linux :Forwarding to another channel

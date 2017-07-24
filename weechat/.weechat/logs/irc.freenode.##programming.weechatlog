@@ -1,0 +1,300 @@
+2017-07-19 13:41:04	-->	ranguli (~ranguli@142.166.133.56) has joined ##programming
+2017-07-19 13:41:04	--	Topic for ##programming is "Community Chat & Programming/Computer Science Discussion | If you have a question, don't ask to ask, just ask! | Paste > 2 lines to a pastebin such as http://ideone.com | Channel rules: http://tinyurl.com/2lb-programming | Colour codes filtered again because idiets."
+2017-07-19 13:41:04	--	Topic set by _W_ on Sat, 12 Nov 2016 09:45:09
+2017-07-19 13:41:04	--	Channel ##programming: 749 nicks (1 op, 13 voices, 735 normals)
+2017-07-19 13:41:06	--	Channel created on Sun, 04 Feb 2007 01:53:51
+2017-07-19 13:41:23	TheG0ldenG0d	because thats not a human readable language
+2017-07-19 13:41:27	-->	abijeet (~abijeet@183.82.190.192) has joined ##programming
+2017-07-19 13:41:35	adsc	why does it have to be?
+2017-07-19 13:41:45	adsc	brainfuck isn't human readable either
+2017-07-19 13:41:56	adsc	or whitespace
+2017-07-19 13:42:11	TheG0ldenG0d	well thats stupid
+2017-07-19 13:42:12	adsc	or Piet
+2017-07-19 13:42:36	mrig	Strange name 'prime' for prime numbers ... seems backwards to me.
+2017-07-19 13:42:36	TheG0ldenG0d	code thats easier to read is easier to maintain and fix bugs
+2017-07-19 13:42:39	Violinist	that sounds smart
+2017-07-19 13:42:48	-->	Exaeta-mobile (~Exaeta@2601:c2:8403:a917:bd31:972f:dddf:8282) has joined ##programming
+2017-07-19 13:42:52	adsc	TheG0ldenG0d: it's a joke language
+2017-07-19 13:43:05	<--	mmattice (~mmattice@unaffiliated/mmattice) has quit (Ping timeout: 240 seconds)
+2017-07-19 13:43:05	adsc	TheG0ldenG0d: like intercal etc.
+2017-07-19 13:43:18	Exaeta-mobile	hello world
+2017-07-19 13:43:30	adsc	no, it's patrick
+2017-07-19 13:44:02	-->	synthroid (~synthroid@gateway/vpn/privateinternetaccess/synthroid) has joined ##programming
+2017-07-19 13:44:03	-->	Sxuza (~textual@41.114.234.30) has joined ##programming
+2017-07-19 13:44:39	<--	m92 (~m92@karaburma-p2p-3dnet-fe0.mediaworksit.net) has quit (Quit: Leaving)
+2017-07-19 13:45:08	-->	adamitsch (~adamitsch@cpe-31-15-195-184.cable.telemach.net) has joined ##programming
+2017-07-19 13:45:28	<--	adsc (1f180acd@gateway/web/freenode/ip.31.24.10.205) has quit (Quit: Page closed)
+2017-07-19 13:45:53	<--	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has quit (Read error: Connection reset by peer)
+2017-07-19 13:46:18	-->	Smeef (~deathonat@unaffiliated/smeef) has joined ##programming
+2017-07-19 13:46:57	mrig	So if I don't want UTF-8 text to break a c program I need to use unsigned char?
+2017-07-19 13:47:01	-->	unyu (~pyon@unaffiliated/pyon) has joined ##programming
+2017-07-19 13:47:10	<--	belmoussaoui (~belmoussa@2a02:a03f:3fb4:bb00:6e64:f48b:b01c:32ee) has quit (Ping timeout: 255 seconds)
+2017-07-19 13:47:11	Violinist	i think i broke javascript
+2017-07-19 13:47:14	-->	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has joined ##programming
+2017-07-19 13:47:34	Violinist	selected[row[model] || row]
+2017-07-19 13:47:36	-->	belmoussaoui (~belmoussa@44.101-247-81.adsl-dyn.isp.belgacom.be) has joined ##programming
+2017-07-19 13:47:45	mrig	is that going to help I wonder, wchar_t seems a little bit much?
+2017-07-19 13:48:43	-->	m4l3z (~m4l3z@LFbn-1-4235-26.w92-169.abo.wanadoo.fr) has joined ##programming
+2017-07-19 13:48:45	<--	m4l3z (~m4l3z@LFbn-1-4235-26.w92-169.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2017-07-19 13:49:31	yawkat	mrig: what do you mean by break
+2017-07-19 13:49:35	<--	sebmiser (~sebmeiste@gateway/vpn/privateinternetaccess/sebmiser) has quit (Ping timeout: 240 seconds)
+2017-07-19 13:50:13	<--	test1600 (~test1600@unaffiliated/test1600) has quit (Read error: Connection reset by peer)
+2017-07-19 13:50:41	-->	test1600 (~test1600@unaffiliated/test1600) has joined ##programming
+2017-07-19 13:50:43	mrig	yawkat: well it seems that certain char will affect the getchar() function.
+2017-07-19 13:50:59	-->	diegs_ (~user@unaffiliated/diegs/x-9438211) has joined ##programming
+2017-07-19 13:51:13	<--	Catalysm (~Catalysm@dD5763D2B.access.telenet.be) has quit (Ping timeout: 255 seconds)
+2017-07-19 13:51:22	yawkat	as long as you check for EOF *before* casting to char itll be fine
+2017-07-19 13:51:23	seventy	burned out from python because I keep stopping and having to relearn tiny bits fuck
+2017-07-19 13:51:36	<--	diegs_ (~user@unaffiliated/diegs/x-9438211) has quit (Remote host closed the connection)
+2017-07-19 13:51:42	<--	allegorical__ (~allegoric@toroon4213w-lp140-01-69-158-106-213.dsl.bell.ca) has left ##programming ("Leaving")
+2017-07-19 13:52:36	mrig	yawkat, ok, so If I work with them as int and cast afterwards, thank you I will bare that in mind and take a closer look at what is happening.
+2017-07-19 13:53:16	mrig	yawkat: Yes I have been going straight to char in this code, cool!
+2017-07-19 13:53:41	yawkat	if you do that itll break with unsigned char too
+2017-07-19 13:54:00	yawkat	theres just no room in the char type for EOF so itll have to map to a real char
+2017-07-19 13:54:44	vdamewood	If I want my ball to jump only when it's on a platform, should I just do a ray cast down, and see if the distance is epsilon, or do game engines usually have a way to tell if a physical object is on a surface?
+2017-07-19 13:54:49	<--	keepguessing (~keepguess@208.91.1.34) has quit (Remote host closed the connection)
+2017-07-19 13:55:06	GeDaMo	Collision detection?
+2017-07-19 13:55:17	<--	wellick (~thx@a83-132-218-50.cpe.netcabo.pt) has quit (Quit: Leaving)
+2017-07-19 13:55:46	+beaky	https://www.amazon.com/Real-Time-Collision-Detection-Interactive-Technology/dp/1558607323
+2017-07-19 13:55:47	vdamewood	Uhh, yeah, that too.
+2017-07-19 13:56:22	Violinist	collision detection gravity function should have a colided variable
+2017-07-19 13:56:38	Violinist	which will track that
+2017-07-19 13:57:20	vdamewood	Okay, looks like the player and the floor already have collider objects.
+2017-07-19 13:57:28	-->	wdl_ (~WilliamLe@cpe-70-121-118-87.austin.res.rr.com) has joined ##programming
+2017-07-19 13:57:31	<--	wdl (~WilliamLe@cpe-70-121-118-87.austin.res.rr.com) has quit (Ping timeout: 255 seconds)
+2017-07-19 13:57:49	-->	xorro (~x@pa49-197-236-230.pa.qld.optusnet.com.au) has joined ##programming
+2017-07-19 13:57:55	vdamewood	So, I just have to figure out how to say 'if is_touching_floor'
+2017-07-19 13:58:01	<--	Tazmain (~Tazmain@unaffiliated/tazmain) has quit (Quit: Leaving)
+2017-07-19 13:58:08	<--	juvenal (~juvenal@189-18-34-155.dsl.telesp.net.br) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-07-19 13:58:31	-->	discovered (~discovere@unaffiliated/discovered) has joined ##programming
+2017-07-19 13:58:44	-->	FreeFull (~freefull@defocus/sausage-lover) has joined ##programming
+2017-07-19 13:58:56	Violinist	make it generic
+2017-07-19 13:59:03	Violinist	its a gravity function
+2017-07-19 13:59:21	-->	patrick__ (~patrick@10-231-29-134.minnesota.edu) has joined ##programming
+2017-07-19 13:59:23	Violinist	this puts gravity on any object
+2017-07-19 13:59:38	Violinist	and pulls it down constantly if !colided
+2017-07-19 14:00:04	-->	diegs_ (~user@unaffiliated/diegs/x-9438211) has joined ##programming
+2017-07-19 14:00:11	<--	digitalway (~digitalwa@bas9-quebec14-69-159-163-73.dsl.bell.ca) has quit (Read error: Connection reset by peer)
+2017-07-19 14:00:12	<--	GenteelBen (~GenteelBe@cpc111801-lutn14-2-0-cust55.9-3.cable.virginm.net) has quit
+2017-07-19 14:00:34	Violinist	i even have a real gravity formula in mine lel
+2017-07-19 14:00:41	Violinist	and not x--
+2017-07-19 14:01:12	Violinist	also includes terminal  velocity
+2017-07-19 14:01:16	-->	justiceBEAVER (~Moriarty@2a04:1980:3100:1aab:e61d:2dff:fe29:f5b1) has joined ##programming
+2017-07-19 14:01:52	-->	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has joined ##programming
+2017-07-19 14:02:17	-->	solus_mate_usr (~solus__ma@163.47.149.130) has joined ##programming
+2017-07-19 14:02:30	<--	Lauven (~textual@cable-24-135-117-158.dynamic.sbb.rs) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:03:00	mrig	yawkat oh I started changing to uint8_t but that wont take EOF either, ok, int's it is!
+2017-07-19 14:03:37	-->	mizu_no_oto_work (~textual@c-24-60-15-130.hsd1.ma.comcast.net) has joined ##programming
+2017-07-19 14:04:14	<--	grouse (~grouse@80.71.2.213) has quit (Remote host closed the connection)
+2017-07-19 14:06:30	<--	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:07:55	<--	unyu (~pyon@unaffiliated/pyon) has quit (Remote host closed the connection)
+2017-07-19 14:08:04	-->	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has joined ##programming
+2017-07-19 14:08:05	+exio4	vdamewood: make it create a normal vector when colliding or smth
+2017-07-19 14:08:12	+exio4	vdamewood: that way all the equations still work
+2017-07-19 14:08:22	-->	solidfox (~solidfox@unaffiliated/snake/x-2550465) has joined ##programming
+2017-07-19 14:08:27	+exio4	well, not collisions
+2017-07-19 14:08:34	+exio4	3rd newton's law?
+2017-07-19 14:09:09	vdamewood	exio4: Huh?
+2017-07-19 14:09:31	<--	ShadowAgentStorm (ShadowAgen@c-24-56-206-244.customer.broadstripe.net) has quit
+2017-07-19 14:09:34	+exio4	vdamewood: idk, I am trying to come up with a way to generalize everything
+2017-07-19 14:09:37	-->	Cristinel (~Thunderbi@151.27.245.108) has joined ##programming
+2017-07-19 14:09:38	solidfox	exio4, have you begun bitcoin mining yet?
+2017-07-19 14:09:51	-->	unyu (~pyon@unaffiliated/pyon) has joined ##programming
+2017-07-19 14:10:00	+exio4	solidfox: nope, in a few weeks, need to get the funding and I am not really confident on this
+2017-07-19 14:10:28	solidfox	elec. may be cheap, but you really have to have hella power
+2017-07-19 14:10:41	solidfox	entire building filled with asics
+2017-07-19 14:10:43	+exio4	consider electricity free
+2017-07-19 14:10:58	rindolf	solidfox: meow
+2017-07-19 14:11:11	+exio4	we were thinking BTC isn't a good idea and altcoins with GPUs is much better of a deal
+2017-07-19 14:11:11	solidfox	rindolf, :3 sup
+2017-07-19 14:11:16	+exio4	and if things blow up, we just sell the hardware
+2017-07-19 14:11:20	+exio4	to gamers
+2017-07-19 14:11:37	+exio4	while ASICs have.. well, much of a smaller market
+2017-07-19 14:11:38	solidfox	exio4, ah, that's a good alternative.
+2017-07-19 14:11:48	+exio4	if they're GPUs we can make them cash in days
+2017-07-19 14:12:08	rindolf	solidfox: they replaced our windows at our house today
+2017-07-19 14:12:11	-->	cagomez (~cagomez@sb0-cf9a61b1.dsl.impulse.net) has joined ##programming
+2017-07-19 14:12:39	+beaky	damn i love rust
+2017-07-19 14:12:43	solidfox	rindolf, cool
+2017-07-19 14:13:06	rindolf	solidfox: real windows - not software
+2017-07-19 14:13:22	+exio4	haha
+2017-07-19 14:13:24	solidfox	beaky, what exactly were you doing with rust. you said you were making a tea database? and you're drinking that tea now, or is it a different tea?
+2017-07-19 14:13:37	+beaky	yes solidfox im drinking tea right now
+2017-07-19 14:13:44	+exio4	vdamewood: I assumed you had a physics system which worked based on applied forces
+2017-07-19 14:13:57	vdamewood	exio4: Yeah, I do.
+2017-07-19 14:13:58	+exio4	vdamewood: and you had ways to apply forces into something, etc
+2017-07-19 14:14:40	solidfox	beaky, I love rust too
+2017-07-19 14:14:49	vdamewood	Well, I an apply forces, but I already have the code to apply a force.
+2017-07-19 14:14:53	vdamewood	s/an/am/
+2017-07-19 14:14:58	solidfox	beaky, what's your favorite rust feature?
+2017-07-19 14:15:10	vdamewood	err I can apply... That's it.
+2017-07-19 14:15:13	<--	xorro (~x@pa49-197-236-230.pa.qld.optusnet.com.au) has quit (Read error: Connection reset by peer)
+2017-07-19 14:15:18	<--	Volis (~quassel@unaffiliated/hugo-drax/x-7148487) has quit (Ping timeout: 258 seconds)
+2017-07-19 14:15:24	+beaky	solidfox: memory-correctness and fearless concurrency
+2017-07-19 14:15:38	<--	bytefire (~bytefire@unaffiliated/bytefire) has quit (Quit: leaving)
+2017-07-19 14:15:43	+beaky	also cargo
+2017-07-19 14:15:48	vdamewood	I'm working on the code to detect if applying that force is appropriate, which it is if the ball is on a surface, but not if it's floating in the air.
+2017-07-19 14:15:59	<--	DrBlackskull (~DrBlacksk@pool-165-230-224-175.nat.rutgers.edu) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:16:05	+beaky	cargo is kille
+2017-07-19 14:16:08	+beaky	r
+2017-07-19 14:16:20	-->	Volis (~quassel@47.9.129.23) has joined ##programming
+2017-07-19 14:16:20	<--	Volis (~quassel@47.9.129.23) has quit (Changing host)
+2017-07-19 14:16:20	-->	Volis (~quassel@unaffiliated/hugo-drax/x-7148487) has joined ##programming
+2017-07-19 14:16:22	solidfox	I like cargo too
+2017-07-19 14:16:29	<--	Volis (~quassel@unaffiliated/hugo-drax/x-7148487) has quit (Remote host closed the connection)
+2017-07-19 14:16:57	<--	eze (~eze@119-92-231-201.fibertel.com.ar) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:17:00	-->	Flowjob (~quassel@p54926C20.dip0.t-ipconnect.de) has joined ##programming
+2017-07-19 14:17:19	+beaky	i cant live iwthout it
+2017-07-19 14:17:34	+beaky	how do see plas plas programmers use c++ for decades without coming up with anything liek cargo
+2017-07-19 14:17:41	+beaky	(ditto for C programmers)
+2017-07-19 14:17:52	-->	solmate__ (~solus__ma@49.244.141.139) has joined ##programming
+2017-07-19 14:18:05	<--	solmate__ (~solus__ma@49.244.141.139) has quit (Remote host closed the connection)
+2017-07-19 14:18:29	-->	solmate__ (~solus__ma@49.244.141.139) has joined ##programming
+2017-07-19 14:18:33	mrig	beaky, if it didn't exist you would have to invent it!
+2017-07-19 14:19:02	-->	NeXTSUN (~textual@2601:83:8100:42cf:6056:19e6:2a4a:bfb6) has joined ##programming
+2017-07-19 14:19:34	<--	solmate__ (~solus__ma@49.244.141.139) has quit (Remote host closed the connection)
+2017-07-19 14:19:35	<--	solus_mate_usr (~solus__ma@163.47.149.130) has quit (Ping timeout: 255 seconds)
+2017-07-19 14:20:08	<--	NonSecwitter (~NonSecwit@unaffiliated/nonsecwitter) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:20:42	+exio4	gas station smell is nice
+2017-07-19 14:21:19	mrig	Was looking for cargo, imagining it as some kind of extension of docker, but I found this :~ https://en.wikipedia.org/wiki/Cargo_cult_programming
+2017-07-19 14:22:15	unyu	haha
+2017-07-19 14:22:19	+beaky	rofl
+2017-07-19 14:22:30	unyu	they probs mean this: https://crates.io/
+2017-07-19 14:22:50	+beaky	yes its like the npm of rust
+2017-07-19 14:22:55	vdamewood	I'm going to randomly share this video because I like the song: https://youtu.be/Fa7FGG2VDSM
+2017-07-19 14:23:18	<--	Dark_Fox (~foxd@204.14.239.75) has quit (Remote host closed the connection)
+2017-07-19 14:23:35	-->	urodna (~urodna@unaffiliated/urodna) has joined ##programming
+2017-07-19 14:24:05	<--	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has quit (Read error: Connection reset by peer)
+2017-07-19 14:24:10	unyu	beaky: cargo = npm + rust - javascript - leftpad ???
+2017-07-19 14:24:25	<--	Amalynn|2 (~Amalynn@c-73-52-55-164.hsd1.pa.comcast.net) has quit (Ping timeout: 248 seconds)
+2017-07-19 14:24:40	<--	TheG0ldenG0d (~TheG0lden@96.251.21.226) has left ##programming ("Leaving")
+2017-07-19 14:24:50	-->	georgelappies (~georgel@197.89.162.34) has joined ##programming
+2017-07-19 14:25:00	<--	Rainb (~Rainb@cable-78-34-38-242.netcologne.de) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:25:01	+beaky	https://crates.io/crates/leftpad
+2017-07-19 14:25:02	yawkat	poor mans maven
+2017-07-19 14:25:13	+beaky	haha @ poor man's maven
+2017-07-19 14:25:22	<--	cagomez (~cagomez@sb0-cf9a61b1.dsl.impulse.net) has quit (Remote host closed the connection)
+2017-07-19 14:25:34	unyu	whoa
+2017-07-19 14:25:49	-->	cagomez (~cagomez@sb0-cf9a61b1.dsl.impulse.net) has joined ##programming
+2017-07-19 14:25:55	unyu	finally some sanity, hackage doesn't have a leftpad package
+2017-07-19 14:26:11	-->	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has joined ##programming
+2017-07-19 14:26:15	unyu	actually, there's acme-left-pad
+2017-07-19 14:26:16	unyu	wtf
+2017-07-19 14:27:05	unyu	there's also left-pad in pypi, welp
+2017-07-19 14:27:08	-->	pimlu (~pimlu@c-24-19-189-136.hsd1.wa.comcast.net) has joined ##programming
+2017-07-19 14:27:22	rindolf	unyu: on CPAN too
+2017-07-19 14:27:34	rindolf	vdamewood: nice one
+2017-07-19 14:27:35	-->	Stumbler (~Stumbler@2606:a000:8b02:9700:6cbd:efc0:5ad7:a368) has joined ##programming
+2017-07-19 14:27:43	Violinist	pypy
+2017-07-19 14:27:51	Violinist	r u frkn srs
+2017-07-19 14:27:57	Violinist	pypy
+2017-07-19 14:28:08	Violinist	what nerd came up w that name lol
+2017-07-19 14:28:21	yawkat	i cant find a leftpad package in maven, so it is clearly superior.
+2017-07-19 14:28:28	-->	kggr (~korggrodn@93.84.23.63) has joined ##programming
+2017-07-19 14:28:30	unyu	rindolf: whoa, cpan's leftpad is the best
+2017-07-19 14:28:34	unyu	“So that people may depend on this module for their production code, the author commits to never delete it from CPAN.”
+2017-07-19 14:28:43	-->	Phenx (~smuxi@96-89-87-165-static.hfc.comcastbusiness.net) has joined ##programming
+2017-07-19 14:28:58	<--	cagomez (~cagomez@sb0-cf9a61b1.dsl.impulse.net) has quit (Remote host closed the connection)
+2017-07-19 14:29:04	-->	cagomez (~cagomez@sb0-cf9a61b1.dsl.impulse.net) has joined ##programming
+2017-07-19 14:29:22	rindolf	Violinist: still trolling i see
+2017-07-19 14:29:29	-->	guardianx (~guardianx@120.17.77.202) has joined ##programming
+2017-07-19 14:29:32	Violinist	sorry papa
+2017-07-19 14:29:37	Violinist	:D
+2017-07-19 14:29:51	Violinist	ok ok ill stop lol
+2017-07-19 14:29:59	Lencl	Violinist: listen to your daddy
+2017-07-19 14:30:04	rindolf	Violinist: you are not my child
+2017-07-19 14:30:05	<--	guardianx (~guardianx@120.17.77.202) has quit (Client Quit)
+2017-07-19 14:30:16	Violinist	no coz he said pypy
+2017-07-19 14:30:20	Lencl	Besides, you call that trolling?
+2017-07-19 14:30:21	-->	eze (~eze@119-92-231-201.fibertel.com.ar) has joined ##programming
+2017-07-19 14:30:22	<--	seventy (~seventy@d51A41D17.access.telenet.be) has quit (Ping timeout: 255 seconds)
+2017-07-19 14:30:27	<--	romankapitonov (~romankapi@86.57.158.250) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-07-19 14:30:28	Lencl	you haven't seen my farts
+2017-07-19 14:30:42	Lencl	it was so bad, rindolf asked me to stop
+2017-07-19 14:30:43	-->	nostra (4fa8115b@gateway/web/freenode/ip.79.168.17.91) has joined ##programming
+2017-07-19 14:31:04	<--	mizu_no_oto_work (~textual@c-24-60-15-130.hsd1.ma.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-07-19 14:31:11	-->	Sappy (~Sappy@92.49.28.13) has joined ##programming
+2017-07-19 14:31:30	<--	pimlu (~pimlu@c-24-19-189-136.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:31:36	-->	damke_ (~damke@unaffiliated/damke) has joined ##programming
+2017-07-19 14:31:46	<--	hppavilion[1] (~dosgmowdo@58-0-174-206.gci.net) has quit (Ping timeout: 255 seconds)
+2017-07-19 14:32:33	-->	nibble_zero (~chatzilla@37.244.231.177) has joined ##programming
+2017-07-19 14:32:50	<--	nostra (4fa8115b@gateway/web/freenode/ip.79.168.17.91) has quit (Client Quit)
+2017-07-19 14:33:09	-->	wdl (~WilliamLe@cpe-70-121-118-87.austin.res.rr.com) has joined ##programming
+2017-07-19 14:33:28	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 268 seconds)
+2017-07-20 16:57:44	-->	ranguli (~ranguli@142.162.32.74) has joined ##programming
+2017-07-20 16:57:44	--	Topic for ##programming is "Community Chat & Programming/Computer Science Discussion | If you have a question, don't ask to ask, just ask! | Paste > 2 lines to a pastebin such as http://ideone.com | Channel rules: http://tinyurl.com/2lb-programming | Colour codes filtered again because idiets."
+2017-07-20 16:57:44	--	Topic set by _W_ on Sat, 12 Nov 2016 09:45:09
+2017-07-20 16:57:45	--	Channel ##programming: 740 nicks (1 op, 13 voices, 726 normals)
+2017-07-20 16:57:46	--	Channel created on Sun, 04 Feb 2007 01:53:51
+2017-07-20 16:57:50	+Shayanjm	we need more _really good_ programmers.
+2017-07-20 16:57:55	+Shayanjm	we are seriously lacking in those.
+2017-07-20 16:58:13	Rounin	Which is quite scary, seeing as programming is taking over huge chunks of eveything else
+2017-07-20 16:58:17	Rounin	So if there aren't programming jobs, what jobs are there in the end
+2017-07-20 16:58:30	+Shayanjm	Rounin: there are lots of programming jobs
+2017-07-20 16:58:43	+Shayanjm	but it turns out that you actually have to be really good at it to qualify for them
+2017-07-20 16:58:56	+Shayanjm	a really bad programmer can be a net loss to an organization
+2017-07-20 16:58:57	-->	devwop (~devwop@bl23-13-223.dsl.telepac.pt) has joined ##programming
+2017-07-20 16:59:03	broccolistem	but i just wanna make some js scripts
+2017-07-20 16:59:13	+Shayanjm	so it's not a "warm bodies" problem like factories used to see/solve for.
+2017-07-20 16:59:16	jimmt	I've heard a large amount of those programming job postings with a bunch of 5+ year experience requirements are just fake ones so that nobody can actually match the requirements and they can abuse the h1b program with a plausible deniability
+2017-07-20 16:59:17	ocn	jimmt: did anyone ever become a programmer for money? especially with all the outsourcing going on...
+2017-07-20 16:59:22	Rounin	WHat it seems like from where I'm sitting is that the jobs tend to be in specific areas... Namely a few cities in the US, and some low-cost countries that get outsourced jobs
+2017-07-20 16:59:41	+Shayanjm	Rounin: or if you're really good at what you do, you can work remotely and earn lots of $$.
+2017-07-20 16:59:57	-->	anuxivm (~anuxi@92.189.36.210) has joined ##programming
+2017-07-20 16:59:57	<--	abijeet (~abijeet@183.82.190.192) has quit (Ping timeout: 240 seconds)
+2017-07-20 16:59:58	+Shayanjm	but yes, to increase your odds of getting a job you should probably go to where those jobs are.
+2017-07-20 17:00:34	graff	i am paid 1,233,999 dollars per year to make creative shell scripts that print dancing ascii otters to the terminal
+2017-07-20 17:00:35	Violinist	jerbs
+2017-07-20 17:00:35	-->	kirua (~kirua@unaffiliated/kirua) has joined ##programming
+2017-07-20 17:00:48	<--	zergut (uid221522@taskhive/translator/zergut) has quit (Quit: Connection closed for inactivity)
+2017-07-20 17:00:49	Violinist	go where the jerbs r
+2017-07-20 17:00:51	z88	I think you're worth of that salary and more.
+2017-07-20 17:01:01	graff	kidding of course. sounds fun though
+2017-07-20 17:01:02	z88	Just my two cents.
+2017-07-20 17:01:11	graff	thanks z88
+2017-07-20 17:01:47	-->	nertaxos (~nertaxos@188-115-184-12.broadband.tenet.odessa.ua) has joined ##programming
+2017-07-20 17:02:09	Rounin	We have some additional issues where I live, in Norways... Salaries have been driven up insanely by oil, taxes are through the roof, and labour rights are so strong that it's difficult to fire someone
+2017-07-20 17:02:15	Rounin	in Norway I mean
+2017-07-20 17:02:37	Rounin	So basically, the same companies that need new programmers so badly are also too scared to actually hire anyone
+2017-07-20 17:02:37	<--	urodna (~urodna@unaffiliated/urodna) has quit (Quit: urodna)
+2017-07-20 17:02:47	Rounin	So instead they go to the newspapers and complain that they can't find people
+2017-07-20 17:02:53	<--	user2468 (~user2468@dyndsl-080-228-182-119.ewe-ip-backbone.de) has quit (Quit: Leaving)
+2017-07-20 17:03:06	Rounin	And of course some outsource... Same as the H1B issue in the US
+2017-07-20 17:03:46	-->	nblade42 (~Miranda_4@ptr-82npp62fusqsj8yoloc.18120a2.ip6.access.telenet.be) has joined ##programming
+2017-07-20 17:04:04	-->	fyrril (~fyrril@2605:a601:7014:1800:453a:5172:9b40:92) has joined ##programming
+2017-07-20 17:04:47	-->	urodna (~urodna@unaffiliated/urodna) has joined ##programming
+2017-07-20 17:05:11	-->	Rodya_ (~Rodya_@2601:46:4001:e0b4:e5a2:1794:ac16:eecb) has joined ##programming
+2017-07-20 17:05:43	<--	omnipot (~dawid@89-70-164-70.dynamic.chello.pl) has quit (Quit: Leaving)
+2017-07-20 17:06:25	<--	fragment3 (~user@host-212-139-116-235.static.as9105.net) has quit (Remote host closed the connection)
+2017-07-20 17:06:54	-->	Kake_ (~Kake_Fisk@195.181.166.131) has joined ##programming
+2017-07-20 17:07:33	-->	fragment3 (~fragment@host-212-139-116-235.static.as9105.net) has joined ##programming
+2017-07-20 17:07:49	<--	G3nka1 (~hubatrix@unaffiliated/hubatrix) has quit (Quit: Leaving)
+2017-07-20 17:08:22	<--	Drakonan (~Drakonan@75-121-245-25.dyn.centurytel.net) has quit (Read error: Connection reset by peer)
+2017-07-20 17:08:41	ocn	Shayanjm: that's the problem tho, if you're a bad programmer in usa/uk you're pretty much screwed 30k-60k in grad debt, all the basic programming jobs outsourced to india...and you're left with like jobs which ask for 10 years experiance while in debt...and even if you manage to find a job you're still screwed because you can't find a house, because there's some rich chinese / saudis who've bought every property in  the city, prici
+2017-07-20 17:08:45	-->	Drakonan (~Drakonan@75-121-245-25.dyn.centurytel.net) has joined ##programming
+2017-07-20 17:09:16	ocn	no to mention living expenses being allot more than asia.
+2017-07-20 17:09:21	ocn	not*
+2017-07-20 17:09:42	<--	PowerPcMAC (~textual@static-96-248-69-25.cmdnnj.fios.verizon.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-07-20 17:10:08	<--	Rodya_ (~Rodya_@2601:46:4001:e0b4:e5a2:1794:ac16:eecb) has quit (Ping timeout: 276 seconds)
+2017-07-20 17:10:08	<--	mmlj4 (~mmlj4@47-48-196-90.static.gwnt.ga.charter.com) has quit (Ping timeout: 276 seconds)
+2017-07-20 17:10:23	<--	Kake (~Kake_Fisk@2001:464d:372b:0:2575:5a5c:5180:dda2) has quit (Ping timeout: 246 seconds)
+2017-07-20 17:10:33	-->	mmlj4 (~mmlj4@47-48-196-90.static.gwnt.ga.charter.com) has joined ##programming
+2017-07-20 17:11:08	delfini	free tuition = win?
+2017-07-20 17:11:36	<--	ps3_ (~ps3@cpe-172-192-245-96.qld.foxtel.net.au) has quit (Quit: Konversation terminated!)
+2017-07-20 17:11:49	<--	dhil (~dhil@dhcp-90-078.inf.ed.ac.uk) has quit (Ping timeout: 258 seconds)
+2017-07-20 17:12:11	<--	uvarovserge (~uvarovser@gateway/vpn/privateinternetaccess/uvarovserge) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2017-07-20 17:12:25	Rounin	Haha... It's like with taxes... All the companies hope some other company will train the new grads, and they can just sail in and pick the fruit that someone else has sown
+2017-07-20 17:12:53	Rounin	I actually usually don't reapply to places that haven't given me serious consideration... Though I might accept if they contact me
+2017-07-20 17:12:54	pressure679	Pluck rather
+2017-07-20 17:14:10	<--	On4r4p612 (~ouroboros@46.101.55.221) has quit (Ping timeout: 255 seconds)
+2017-07-20 17:14:29	-->	krobzaur (~kyle@209.159.236.161) has joined ##programming
+2017-07-20 17:14:35	<--	Jak_o_Shadows (~Jak@unaffiliated/jak-o-shadows/x-0479135) has quit (Ping timeout: 240 seconds)
+2017-07-20 17:14:35	-->	mandeep (~mandeep@gateway/vpn/privateinternetaccess/mandeepb) has joined ##programming
+2017-07-20 17:17:06	-->	kasa (~koan@unaffiliated/koan) has joined ##programming
+2017-07-20 17:17:53	-->	PowerPcMAC (~textual@static-96-248-69-25.cmdnnj.fios.verizon.net) has joined ##programming
+2017-07-20 17:17:58	<--	koan (~koan@unaffiliated/koan) has quit (Ping timeout: 240 seconds)
+2017-07-20 17:18:00	jimmt	what new programs are even really left to write
+2017-07-20 17:18:06	-->	dt3k (~dt3k@unaffiliated/dt3k) has joined ##programming
+2017-07-20 17:18:10	jimmt	that seems like a problem to me for programming employment
+2017-07-20 17:18:34	jimmt	company websites, accounting systems, bank mainframes, almost everything is a solved problem with off the shelf solutions
+2017-07-20 17:18:49	<--	krobzaur (~kyle@209.159.236.161) has quit (Ping timeout: 248 seconds)

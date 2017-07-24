@@ -1,0 +1,15 @@
+[2017-07-20 16:54:54] WeeChat 1.4 (compiled on Apr 26 2017 18:10:49)
+[2017-07-20 16:54:54] Reading configuration file sec.conf
+[2017-07-20 16:54:54] Reading configuration file weechat.conf
+[2017-07-20 16:54:54] Reading configuration file plugins.conf
+[2017-07-20 16:54:54] Reading configuration file charset.conf
+[2017-07-20 16:54:54] Reading configuration file logger.conf
+[2017-07-20 16:54:54] Reading configuration file exec.conf
+[2017-07-20 16:54:54] Reading configuration file trigger.conf
+[2017-07-20 16:54:54] Reading configuration file aspell.conf
+[2017-07-20 16:54:54] Reading configuration file alias.conf
+[2017-07-20 16:54:54] Reading configuration file xfer.conf
+[2017-07-20 16:54:54] Reading configuration file irc.conf
+[2017-07-20 16:54:54] Reading configuration file relay.conf
+[2017-07-20 16:54:54] Reading configuration file script.conf
+[2017-07-20 16:55:03] irc: connecting to server irc.freenode.net/6667...

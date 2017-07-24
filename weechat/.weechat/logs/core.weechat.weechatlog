@@ -1,0 +1,40 @@
+2017-07-19 13:39:37		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-19 13:39:56	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2017-07-19 13:40:02		[irc]  /server  list|listfull [<server>]
+2017-07-19 13:40:02		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2017-07-19 13:40:02		                copy|rename <server> <new_name>
+2017-07-19 13:40:02		                reorder <server> [<server>...]
+2017-07-19 13:40:02		                del|keep <server>
+2017-07-19 13:40:02		                deloutq|jump|raw
+2017-07-19 13:40:02		list, add or remove IRC servers
+2017-07-19 13:40:02		    list: list servers (without argument, this list is displayed)
+2017-07-19 13:40:02		listfull: list servers with detailed info for each server
+2017-07-19 13:40:02		     add: add a new server
+2017-07-19 13:40:02		  server: server name, for internal and display use
+2017-07-19 13:40:02		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2017-07-19 13:40:02		    temp: add a temporary server (not saved)
+2017-07-19 13:40:02		  option: set option for server (for boolean option, value can be omitted)
+2017-07-19 13:40:02		nooption: set boolean option to 'off' (for example: -nossl)
+2017-07-19 13:40:02		    copy: duplicate a server
+2017-07-19 13:40:02		  rename: rename a server
+2017-07-19 13:40:02		 reorder: reorder list of servers
+2017-07-19 13:40:02		    keep: keep server in config file (for temporary servers only)
+2017-07-19 13:40:02		     del: delete a server
+2017-07-19 13:40:02		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2017-07-19 13:40:02		    jump: jump to server buffer
+2017-07-19 13:40:02		     raw: open buffer with raw IRC data
+2017-07-19 13:40:02		Examples:
+2017-07-19 13:40:02		  /server listfull
+2017-07-19 13:40:02		  /server add freenode chat.freenode.net
+2017-07-19 13:40:02		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2017-07-19 13:40:02		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2017-07-19 13:40:02		  /server copy freenode freenode-test
+2017-07-19 13:40:02		  /server rename freenode-test freenode2
+2017-07-19 13:40:02		  /server reorder freenode2 freenode
+2017-07-19 13:40:02		  /server del freenode
+2017-07-19 13:40:02		  /server deloutq
+2017-07-19 13:40:11		irc: server freenode added
+2017-07-19 13:40:16	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2017-07-20 16:54:54		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-20 16:55:28	=!=	irc: unable to add temporary server "#security" because the addition of temporary servers with command /connect is currently disabled
+2017-07-20 16:55:28	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers

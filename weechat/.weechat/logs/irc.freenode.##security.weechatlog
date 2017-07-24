@@ -1,0 +1,207 @@
+2017-07-19 13:40:46	-->	ranguli (~ranguli@142.166.133.56) has joined ##security
+2017-07-19 13:40:46	--	Topic for ##security is "Watch your OPSEC. Be Nice. Don't be an asshole. We /kb on being a shithead. Talk about security stuff! | WannaCry ransomware info: https://gist.github.com/rain-1/989428fa5504f378b993ee6efbc0b168"
+2017-07-19 13:40:46	--	Topic set by jnpplf on Sat, 13 May 2017 14:31:45
+2017-07-19 13:40:46	--	Channel ##security: 1065 nicks (9 ops, 0 voices, 1056 normals)
+2017-07-19 13:40:46	--	PvNotice(ChanServ): In line with freenode channel naming policy ( http://freenode.net/policy.shtml#channelnaming ), channel management of #security has moved to ##security .... please update your autojoins! Thanks.
+2017-07-19 13:40:48	--	Channel created on Wed, 19 Jul 2006 18:19:13
+2017-07-19 13:40:53	-->	neunon (~neunon@unaffiliated/neunon) has joined ##security
+2017-07-19 13:41:02	flyback	that would allow us to use crypto just for the login auth and leave messages/data unencrypted
+2017-07-19 13:41:05	flyback	mabye someday :(
+2017-07-19 13:41:09	iz	so he goes on to say that on linux though, /dev/urandom can spit out predictable data, due to configuration issues
+2017-07-19 13:41:14	flyback	that way at least people can verify who they are when they login
+2017-07-19 13:41:16	flyback	to arps etc
+2017-07-19 13:41:19	Vendan	that's a separate problem
+2017-07-19 13:41:36	Vendan	but /dev/random and /dev/urandom pull from the exact same CSPRNG
+2017-07-19 13:41:37	<--	Shecky (958008f5@gateway/web/cgi-irc/kiwiirc.com/ip.149.128.8.245) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2017-07-19 13:41:38	flyback	I still want to build a radioactive RNG
+2017-07-19 13:41:41	flyback	just to canuck with it
+2017-07-19 13:41:48	flyback	you take a webcame, get the cheapest one you can find
+2017-07-19 13:41:53	iz	so for the standard linux user that doesn't know how to make sure that doesn't happen, i think it makes sense to use /dev/random instead of /dev/urandom on linux to prevent them from accidentally doing something bad
+2017-07-19 13:42:03	flyback	you remove the lense and protective glass over the cmos/ccs sensor
+2017-07-19 13:42:05	iz	Vendan: ah, i see what you're saying
+2017-07-19 13:42:19	flyback	and you put over it a piece of amercium from a smoke detector
+2017-07-19 13:42:31	flyback	and record the random pixel hits by alpha rays
+2017-07-19 13:42:36	-->	smt_ (~smt@unaffiliated/smt) has joined ##security
+2017-07-19 13:43:21	Vendan	linux should be using getrandom(2) really
+2017-07-19 13:43:34	Vendan	blocks until enough entropy to get started safely
+2017-07-19 13:43:39	Vendan	then never blocks again
+2017-07-19 13:43:49	Vendan	that's the same thing FreeBSD does
+2017-07-19 13:44:00	<--	maiki (~maiki@unaffiliated/maiki) has quit (Ping timeout: 240 seconds)
+2017-07-19 13:44:02	-->	synthroid (~synthroid@gateway/vpn/privateinternetaccess/synthroid) has joined ##security
+2017-07-19 13:44:19	iz	ah cool, i'll have to remember about that function
+2017-07-19 13:44:32	Vendan	on FreeBSD, /dev/random and /dev/urandom are identical:  they block until enough starting entropy is gathered, then never block again
+2017-07-19 13:45:42	<--	redworld (~redworld@208.71.93.2) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2017-07-19 13:45:47	Vendan	also, some linux distros save "seed entropy" into a file to get read first thing on next boot
+2017-07-19 13:45:53	<--	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has quit (Read error: Connection reset by peer)
+2017-07-19 13:46:20	<--	smt (~smt@unaffiliated/smt) has quit (Ping timeout: 260 seconds)
+2017-07-19 13:46:32	iz	yeah, i knew about the storing of seed entropy across boots
+2017-07-19 13:47:14	-->	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has joined ##security
+2017-07-19 13:47:31	Vendan	flyback, https://www.vanheusden.com/ved/
+2017-07-19 13:47:37	Vendan	point it at a lavalamp
+2017-07-19 13:47:55	<--	Anon1921 (~MC@77.44.47.7) has quit
+2017-07-19 13:49:20	flyback	yeah I knew about that one too
+2017-07-19 13:49:26	flyback	i already build a alpha ray detector thing
+2017-07-19 13:49:33	flyback	using a busted old b/w portable tv tube
+2017-07-19 13:49:38	flyback	stuck the peice of smoke detector inside
+2017-07-19 13:49:45	flyback	the phosphour glows in the spot
+2017-07-19 13:49:47	flyback	very cool
+2017-07-19 13:50:04	Vendan	http://www.inventgeek.com/alpha-radiation-visualizer/ webcam + smoke detector
+2017-07-19 13:50:16	flyback	alphas are harmless stopped by dead skin or this much air <     >
+2017-07-19 13:50:28	Vendan	slap that and video_entropyd together
+2017-07-19 13:50:33	flyback	unless you are a dipshit and grind up the gold shell amercium and inshale or swallow it
+2017-07-19 13:50:39	Vendan	though the alpha events seem rather slow
+2017-07-19 13:50:43	flyback	then it can charge dna moleculas and cause issues
+2017-07-19 13:51:13	<--	Catalysm (~Catalysm@dD5763D2B.access.telenet.be) has quit (Ping timeout: 255 seconds)
+2017-07-19 13:51:21	en4rab	Vendan, if you want more events get a bigger lump of americium
+2017-07-19 13:51:25	flyback	is the unabomber still alive?
+2017-07-19 13:51:28	flyback	I don't remember
+2017-07-19 13:51:32	Vendan	I don't care about more events
+2017-07-19 13:51:35	<--	biggator (~biggator@unaffiliated/biggator) has quit (Read error: Connection reset by peer)
+2017-07-19 13:51:45	Vendan	I'd just point it at a lavalamp if I wanted more entropy
+2017-07-19 13:51:47	flyback	get some trinium
+2017-07-19 13:51:53	-->	biggator (~biggator@unaffiliated/biggator) has joined ##security
+2017-07-19 13:51:58	Vendan	then I'd get retro random numbers
+2017-07-19 13:53:09	en4rab	old fiestaware plates might make an ok source too, they are quit hot
+2017-07-19 13:53:24	<--	rb4sh (~rb4sh@host80-69-dynamic.56-79-r.retail.telecomitalia.it) has quit (Quit: BSOD)
+2017-07-19 13:54:08	-->	hphuoc25 (~hphuoc25@bb121-7-103-152.singnet.com.sg) has joined ##security
+2017-07-19 13:57:03	<--	b4dtr1p (~b4dtr1p@net-188-217-54-208.cust.vodafonedsl.it) has quit (Read error: Connection reset by peer)
+2017-07-19 13:57:21	-->	tavish (~tavish@unaffiliated/tavish) has joined ##security
+2017-07-19 13:57:52	<--	jack_rip_vim (~androirc@unaffiliated/jack-rip-vim/x-8876626) has quit (Quit: Poop me here!  NVM !   :)  Jack Tip Hat!)
+2017-07-19 13:58:38	--	takamatsu_ is now known as takamatsu
+2017-07-19 13:58:41	<--	B4ggi0 (~B4ggi0@106.75.193.162) has quit (Read error: Connection reset by peer)
+2017-07-19 13:59:12	-->	maiki (~maiki@unaffiliated/maiki) has joined ##security
+2017-07-19 13:59:52	<--	hphuoc25 (~hphuoc25@bb121-7-103-152.singnet.com.sg) has quit (Ping timeout: 260 seconds)
+2017-07-19 14:00:10	<--	negorath_ (~negorath@188.95.247.249) has quit (Ping timeout: 268 seconds)
+2017-07-19 14:00:12	<--	GenteelBen (~GenteelBe@cpc111801-lutn14-2-0-cust55.9-3.cable.virginm.net) has quit
+2017-07-19 14:00:20	-->	xotedend (~xotedend@unaffiliated/xotedend) has joined ##security
+2017-07-19 14:01:05	sudormrf	yo
+2017-07-19 14:01:16	sudormrf	what's the best way to capture SMB traffic via a pivot?
+2017-07-19 14:01:24	sudormrf	I see it in my pcap
+2017-07-19 14:01:30	sudormrf	i had the ntlm module running in MSF
+2017-07-19 14:01:34	sudormrf	and a couple others
+2017-07-19 14:01:39	sudormrf	but it wasn't grabbing it
+2017-07-19 14:01:51	@wilsonfisk	sand || salt && laser pointer for entropy
+2017-07-19 14:01:52	-->	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has joined ##security
+2017-07-19 14:04:04	<--	maiki (~maiki@unaffiliated/maiki) has quit (Ping timeout: 260 seconds)
+2017-07-19 14:04:09	-->	atmark (atmark@freebsd/user/atmark) has joined ##security
+2017-07-19 14:04:55	-->	agnarus (~agnarus@unaffiliated/agnarus) has joined ##security
+2017-07-19 14:05:44	--	smt_ is now known as smt
+2017-07-19 14:06:05	iz	wilsonfisk: with a video camerea?
+2017-07-19 14:06:30	<--	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:06:36	-->	linuxmodder (~linuxmodd@unaffiliated/corey84) has joined ##security
+2017-07-19 14:07:33	-->	foo (~foo@unaffiliated/foo) has joined ##security
+2017-07-19 14:07:49	foo	I'm seeing this on a website that is currently flagged as spam by Google: https://screencast.com/t/9ellA0Ww - this looks like malware to you, correct? 
+2017-07-19 14:08:03	-->	dreadedfrog (~dreadedfr@ip-213-127-26-231.ip.prioritytelecom.net) has joined ##security
+2017-07-19 14:09:01	-->	redworld (~redworld@208.71.93.2) has joined ##security
+2017-07-19 14:11:07	@wilsonfisk	iz: not necessary but sure
+2017-07-19 14:11:21	-->	tecan (~clay@unaffiliated/unit41) has joined ##security
+2017-07-19 14:11:38	@wilsonfisk	I think it used an arduino or something. sec.
+2017-07-19 14:12:38	<--	adminseodwn (~archer@unaffiliated/remcwo9o) has quit (Remote host closed the connection)
+2017-07-19 14:12:43	iz	what is the input then?
+2017-07-19 14:12:51	en4rab	is that something like counting sand grains in an egg timer as they fall through a laser beam 
+2017-07-19 14:13:38	<--	cccc828 (~severin@2001:4ca0:2003:1920:f82:63f:bdea:32f) has quit (Quit: Leaving)
+2017-07-19 14:13:39	<--	WeiJunLi (~weijunli@154.0.69.158) has quit (Remote host closed the connection)
+2017-07-19 14:13:40	<--	nodweber (~nodweber@80.83.137.114) has quit (Remote host closed the connection)
+2017-07-19 14:13:42	-->	adminseodwn (~archer@unaffiliated/remcwo9o) has joined ##security
+2017-07-19 14:13:50	-->	WeiJunLi (~weijunli@154.0.69.158) has joined ##security
+2017-07-19 14:14:00	<--	alxtb_ (~alxtb@185.65.109.249) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:14:32	@wilsonfisk	iz: original article 404'd but here ya go:  http://makezine.com/2009/12/23/usb-hourglass-random-number-generat/
+2017-07-19 14:14:40	@wilsonfisk	en4rab: yup; exactly
+2017-07-19 14:15:59	<--	DrBlackskull (~DrBlacksk@pool-165-230-224-175.nat.rutgers.edu) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:16:36	en4rab	not dark enough, i demand a version with a flow cytometer plumbed into your body generating random numbers as blood cells flow through it :P
+2017-07-19 14:16:52	<--	PersianMG (~PersianMG@unaffiliated/persianmg) has quit (Quit: Catch Me Outside How Bout Dat)
+2017-07-19 14:16:57	-->	overflow_ (~overflow@71.19.252.22) has joined ##security
+2017-07-19 14:18:22	<--	biggator (~biggator@unaffiliated/biggator) has quit (Read error: Connection reset by peer)
+2017-07-19 14:18:40	-->	biggator (~biggator@unaffiliated/biggator) has joined ##security
+2017-07-19 14:18:48	@wilsonfisk	entropy through plasma infusion!!!  or maybe dialysis ;P
+2017-07-19 14:19:13	@wilsonfisk	actually
+2017-07-19 14:19:33	@wilsonfisk	en4rab: you could probably do that with one of those finger pulse meters
+2017-07-19 14:19:44	@wilsonfisk	...now I wanna try...
+2017-07-19 14:19:49	en4rab	people will think its extra special if it requires a regular offering of blood to make it work 
+2017-07-19 14:20:08	<--	NonSecwitter (~NonSecwit@unaffiliated/nonsecwitter) has quit (Ping timeout: 240 seconds)
+2017-07-19 14:20:23	@wilsonfisk	you don't prick your finger before using any of your NFC cards? ...thought that was s.o.p.
+2017-07-19 14:20:32	<--	rhorama (~rhorama@c-98-206-25-74.hsd1.il.comcast.net) has quit (Read error: Connection reset by peer)
+2017-07-19 14:20:46	iz	every time i unlock my phone, it's like i'm doing a diabetes blood test
+2017-07-19 14:21:11	iz	man, that would be terrible
+2017-07-19 14:21:28	en4rab	iz you could replace the smashed screen
+2017-07-19 14:21:36	en4rab	and avoid the lacerations
+2017-07-19 14:21:48	@wilsonfisk	en4rab: perfect price for something I'm going to tear apart :D  http://www.ebay.com/bhp/fingertip-pulse-oximeter
+2017-07-19 14:21:57	iz	no, like the fingerprint reader is actually a little needle w/ a blood reader
+2017-07-19 14:22:01	<--	unknwn (~nezinau@unaffiliated/unknwn) has quit (Remote host closed the connection)
+2017-07-19 14:22:03	TimMc	hey guys I have a private key QR code tattooed on my stomach lining so I swallow my phone to unlock it, but my phone is always relocked by the time it comes out the other end, what do?
+2017-07-19 14:22:10	@wilsonfisk	usually if it's >$50 I don't rip && tear
+2017-07-19 14:22:49	-->	rhorama (~rhorama@98.206.25.74) has joined ##security
+2017-07-19 14:23:11	-->	ok91 (~Thunderbi@unaffiliated/ok91) has joined ##security
+2017-07-19 14:23:21	@wilsonfisk	wonder if you could use the oximeter somehow for moar entropy
+2017-07-19 14:23:42	@wilsonfisk	maybe && or xor the data streams or something
+2017-07-19 14:24:01	en4rab	TimMc, http://www.ebay.com/itm/5M-6LED-5-5mm-Android-Endoscope-Waterproof-Snake-Borescope-USB-Inspection-Camera-/161998978131 10 meters should probably be long enough to get to it from either end
+2017-07-19 14:24:03	-->	viccuad (~vic@unaffiliated/viccuad) has joined ##security
+2017-07-19 14:24:05	<--	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has quit (Read error: Connection reset by peer)
+2017-07-19 14:24:14	-->	treefish (~Adium@96-32-201-224.dhcp.slid.la.charter.com) has joined ##security
+2017-07-19 14:24:40	@wilsonfisk	or to look under doors before you pick them ;}
+2017-07-19 14:25:12	TimMc	en4rab: Crap, that also means someone could snoop on my unlock code!
+2017-07-19 14:25:40	@wilsonfisk	inb4 brute force QR recovery
+2017-07-19 14:26:11	-->	jan64 (~jan64@dou190.neoplus.adsl.tpnet.pl) has joined ##security
+2017-07-19 14:26:14	@wilsonfisk	.t https://github.com/frac/qr-decode-brute-force
+2017-07-19 14:26:27	@wilsonfisk	boooooooooooo Emmy. you suck
+2017-07-19 14:27:03	TimMc	I really want a borescope
+2017-07-19 14:27:13	en4rab	i wonder if those oled pulse ox things can be reprogrammed, like a crap mario game you have to hold your breath to make him jump
+2017-07-19 14:27:13	iz	the way he got that QR code tattoo in the first place -- swallowing a very tiny tattoo artist
+2017-07-19 14:29:46	-->	Abraham_Slam (~Abraham_S@jbl22a.sbs.umass.edu) has joined ##security
+2017-07-19 14:30:29	<--	viccuad (~vic@unaffiliated/viccuad) has quit (Quit: WeeChat 1.9)
+2017-07-19 14:30:54	-->	viccuad_ (~vic@unaffiliated/viccuad) has joined ##security
+2017-07-19 14:32:32	-->	nibble_zero (~chatzilla@37.244.231.177) has joined ##security
+2017-07-19 14:33:13	tecan	https://www.hemi-sync.com/the-way-of-hemi-sync-free-download/  << strange stuff
+2017-07-20 16:55:32	-->	ranguli (~ranguli@142.162.32.74) has joined ##security
+2017-07-20 16:55:32	--	Topic for ##security is "Watch your OPSEC. Be Nice. Don't be an asshole. We /kb on being a shithead. Talk about security stuff! | WannaCry ransomware info: https://gist.github.com/rain-1/989428fa5504f378b993ee6efbc0b168"
+2017-07-20 16:55:32	--	Topic set by jnpplf on Sat, 13 May 2017 14:31:45
+2017-07-20 16:55:32	--	Channel ##security: 1046 nicks (9 ops, 0 voices, 1037 normals)
+2017-07-20 16:55:32	--	PvNotice(ChanServ): In line with freenode channel naming policy ( http://freenode.net/policy.shtml#channelnaming ), channel management of #security has moved to ##security .... please update your autojoins! Thanks.
+2017-07-20 16:55:34	--	Channel created on Wed, 19 Jul 2006 18:19:13
+2017-07-20 16:56:00	<--	Buda (~Budadona@2a00:d880:5:702::5cad) has quit (Read error: Connection reset by peer)
+2017-07-20 16:56:11	-->	BlackWinter_ (~BlackWint@gateway/vpn/privateinternetaccess/blackwinter) has joined ##security
+2017-07-20 16:56:58	-->	linuxmodder_ (~linuxmodd@unaffiliated/corey84) has joined ##security
+2017-07-20 16:57:28	<--	BlackWinter (~BlackWint@gateway/vpn/privateinternetaccess/blackwinter) has quit (Remote host closed the connection)
+2017-07-20 16:57:29	--	BlackWinter_ is now known as BlackWinter
+2017-07-20 16:57:59	duncan^	I wouldn't trust Norton to bake a pain au chocolat
+2017-07-20 16:58:51	-->	datamoshr_ (~john@unaffiliated/datamoshr) has joined ##security
+2017-07-20 16:59:07	-->	dionysus70 (~Thunderbi@unaffiliated/dionysus69) has joined ##security
+2017-07-20 16:59:12	-->	cantankerousking (4ac82e05@gateway/web/cgi-irc/kiwiirc.com/ip.74.200.46.5) has joined ##security
+2017-07-20 16:59:27	<--	dionysus69 (~Thunderbi@unaffiliated/dionysus69) has quit (Ping timeout: 240 seconds)
+2017-07-20 16:59:28	--	dionysus70 is now known as dionysus69
+2017-07-20 16:59:50	<--	linuxmodder (~linuxmodd@unaffiliated/corey84) has quit (Ping timeout: 240 seconds)
+2017-07-20 16:59:57	<--	hstl (~hstl@188.244.248.8) has quit (Read error: Connection reset by peer)
+2017-07-20 17:00:48	<--	daszorz (~daszorz@cpc106809-live29-2-0-cust896.17-2.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2017-07-20 17:00:58	<--	PlasmaStar (Plasma@unaffiliated/plasmastar) has quit (Ping timeout: 241 seconds)
+2017-07-20 17:01:01	-->	Buda (~Budadona@2a00:d880:5:702::5cad) has joined ##security
+2017-07-20 17:01:47	-->	nertaxos (~nertaxos@188-115-184-12.broadband.tenet.odessa.ua) has joined ##security
+2017-07-20 17:01:53	<--	dave0x6d (uid190567@gateway/web/irccloud.com/x-cwrdbxxbtcwjyrvs) has quit (Quit: Connection closed for inactivity)
+2017-07-20 17:02:57	<--	datamoshr_ (~john@unaffiliated/datamoshr) has quit (Ping timeout: 240 seconds)
+2017-07-20 17:03:21	-->	hamersaw (~hamersaw@dhcp06.netsec.colostate.edu) has joined ##security
+2017-07-20 17:04:04	-->	fyrril (~fyrril@2605:a601:7014:1800:453a:5172:9b40:92) has joined ##security
+2017-07-20 17:04:37	-->	vaejm (~vaejm@gateway/tor-sasl/vaejm) has joined ##security
+2017-07-20 17:05:52	-->	jolvera (~jolvera@unaffiliated/thinkxl) has joined ##security
+2017-07-20 17:07:27	-->	mnords (~mnords@unaffiliated/mnords) has joined ##security
+2017-07-20 17:07:35	<--	Abraham_Slam (~Abraham_S@jbl22a.sbs.umass.edu) has quit (Read error: Connection reset by peer)
+2017-07-20 17:07:40	-->	blocke (~blocke@cpe-98-15-158-68.hvc.res.rr.com) has joined ##security
+2017-07-20 17:08:12	<--	soulisson (~soulisson@unaffiliated/soulisson) has quit (Quit: Leaving)
+2017-07-20 17:08:37	SonicwallL	:)
+2017-07-20 17:10:08	<--	mmlj4 (~mmlj4@47-48-196-90.static.gwnt.ga.charter.com) has quit (Ping timeout: 276 seconds)
+2017-07-20 17:10:33	-->	mmlj4 (~mmlj4@47-48-196-90.static.gwnt.ga.charter.com) has joined ##security
+2017-07-20 17:10:35	-->	treefish (~Adium@2600-6c5a-4b7f-dfcd-216f-7225-fd01-2f6e.dhcp6.chtrptr.net) has joined ##security
+2017-07-20 17:11:17	<--	pepee (~p@unaffiliated/pepee) has quit (Quit: WeeChat 1.7)
+2017-07-20 17:11:27	-->	Abraham_Slam (~Abraham_S@jbl22a.sbs.umass.edu) has joined ##security
+2017-07-20 17:11:53	<--	freakazoid0223 (~IceChat9@pool-72-94-95-33.phlapa.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2017-07-20 17:12:11	<--	uvarovserge (~uvarovser@gateway/vpn/privateinternetaccess/uvarovserge) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2017-07-20 17:12:13	<--	snowkidind (~textual@216-15-40-124.c3-0.gth-ubr1.lnh-gth.md.cable.rcn.com) has quit (Quit: astalaPIZZA Baby!)
+2017-07-20 17:12:44	<--	_Nox (~Nox@taskhive/supporter/everything-we-want) has quit (Read error: Connection reset by peer)
+2017-07-20 17:12:51	<--	chills42 (~chills42@38.109.178.162) has quit (Remote host closed the connection)
+2017-07-20 17:13:28	-->	chills42 (~chills42@38.109.178.162) has joined ##security
+2017-07-20 17:14:01	<--	On4r4p (~ouroboros@46.101.55.221) has quit (Ping timeout: 248 seconds)
+2017-07-20 17:15:29	-->	kermit (~kermit@pdpc/supporter/bronze/kermit) has joined ##security
+2017-07-20 17:15:35	kermit	can a null pointer derefence in the kernel allow privelege escallation?  i'm getting mixed opinoins, some say it used to but cant now, some say it still could easily
+2017-07-20 17:17:03	-->	pepee (~p@unaffiliated/pepee) has joined ##security
+2017-07-20 17:17:19	-->	AverageJ0e (~joe@ip70-176-251-195.ph.ph.cox.net) has joined ##security
+2017-07-20 17:17:52	<--	rafael (~none@unaffiliated/rafael-cunha/x-5167236) has quit (Remote host closed the connection)
+2017-07-20 17:17:52	<--	chills42 (~chills42@38.109.178.162) has quit (Ping timeout: 260 seconds)
+2017-07-20 17:18:06	-->	dt3k (~dt3k@unaffiliated/dt3k) has joined ##security
