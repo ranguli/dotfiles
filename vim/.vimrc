@@ -27,6 +27,8 @@ set clipboard=unnamedplus       " use the systems clipboard, so we can copy in
                                 " and out of vim easily 
 set background=light
 let g:airline_theme='papercolor'
+let g:livepreview_previewer = 'zathura'
+
 
 if has("gui_running")
     "set guioptions -=T             " Settings to hide the toolbar,
