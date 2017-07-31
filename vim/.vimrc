@@ -33,7 +33,7 @@ if has("gui_running")
     set guioptions -=m             " menubar, left and right scrollbar
     set guioptions -=r             " in GUI vim.
     set guioptions -=L 
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
     set lines=60
     set columns=120
 endif
