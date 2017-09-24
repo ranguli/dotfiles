@@ -1,3 +1,4 @@
+"
 "   ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
 "   ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
 "   ██║   ██║██║██╔████╔██║██████╔╝██║     
@@ -25,8 +26,6 @@ set expandtab
 set number
 set clipboard=unnamedplus       " use the systems clipboard, so we can copy in
                                 " and out of vim easily 
-set background=light
-let g:airline_theme='papercolor'
 let g:livepreview_previewer = 'zathura'
 
 
@@ -64,17 +63,19 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mileszs/ack.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'nlknguyen/papercolor-theme'
+Plugin 'dracula/vim'
+Plugin 'Yggdroot/indentLine'
+
+
 call vundle#end()            " required
 
 " Startup / Runtime
 let g:airline_powerline_fonts = 1
-"colorscheme base16-phd
-colorscheme PaperColor
+colorscheme dracula 
 
 autocmd vimenter * NERDTree
 
