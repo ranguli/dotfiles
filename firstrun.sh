@@ -6,3 +6,6 @@ sudo chsh -s /usr/bin/zsh
 stow vim
 stow tmux
 stow x11
+
+xrdb -merge ./x11/.Xdefaults
+xrdb -merge ./x11/.Xresources
