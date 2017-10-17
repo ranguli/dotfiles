@@ -1,15 +1,5 @@
-#   ███████╗███████╗██╗  ██╗██████╗  ██████╗
-#   ╚══███╔╝██╔════╝██║  ██║██╔══██╗██╔════╝
-#     ███╔╝ ███████╗███████║██████╔╝██║     
-#    ███╔╝  ╚════██║██╔══██║██╔══██╗██║     
-#   ███████╗███████║██║  ██║██║  ██║╚██████╗
-#   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-#   
-#   Author: ranguli
-#   GitHub: www.github.com/ranguli/dotfiles
-#   2017
-#
-
+if [ "$TMUX" = "" ]; then tmux; fi
+cd ~/
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -75,11 +65,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='vim'
- fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -95,3 +85,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+

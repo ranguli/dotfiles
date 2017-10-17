@@ -12,11 +12,13 @@
 
 
 
-"Sets"
+"Sets
 set nocompatible                " be iMproved, required 
 set t_Co=256
 let base16colorspace=256
 let livepreview_previewer = 'zathura' 
+
+
 filetype off                    " required 
 filetype plugin indent on       " this dictates how tabs and spaces work, 
 syntax on
@@ -27,7 +29,6 @@ set number
 set clipboard=unnamedplus       " use the systems clipboard, so we can copy in
                                 " and out of vim easily 
 let g:livepreview_previewer = 'zathura'
-
 
 if has("gui_running")
     "set guioptions -=T             " Settings to hide the toolbar,
@@ -75,6 +76,9 @@ call vundle#end()            " required
 
 " Startup / Runtime
 let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_dark_inactive_border = 1
+let g:airline_solarized_bg='dark'
 
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
