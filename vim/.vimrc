@@ -69,13 +69,12 @@ Plugin 'jonathanfilip/vim-lucius'
 Plugin 'nlknguyen/papercolor-theme'
 Plugin 'dracula/vim'
 Plugin 'Yggdroot/indentLine'
-
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()            " required
 
 " Startup / Runtime
 let g:airline_powerline_fonts = 1
-colorscheme dracula 
 
 autocmd vimenter * NERDTree
 
