@@ -1,1 +1,1 @@
-xmodmap ~/.xmodmap
+~/scripts/xcape.sh

@@ -24,9 +24,6 @@ set shiftwidth=4                " a tab is just simply 4 spaces.
 set expandtab
 set number
 set clipboard=unnamedplus      " Use system clipboard 
-set guioptions -=m
-set guioptions -=r
-set guioptions -=L 
 
 let base16colorspace=256
 let livepreview_previewer = 'zathura' 
@@ -49,6 +46,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 nnoremap <leader>s :w<cr>
 inoremap <leader>s <C-c>:w<cr>
+nnoremap ss i<space><esc>
 
 call vundle#begin()
 
