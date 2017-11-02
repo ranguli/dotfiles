@@ -11,9 +11,8 @@
 "    2017
 
 
-
-filetype off                    
 filetype plugin indent on       
+filetype plugin on
 syntax on
 
 set rtp+=$HOME/.vim/bundle/Vundle.vim
@@ -23,7 +22,8 @@ set tabstop=4                   " Setup so that tabs don't exist,
 set shiftwidth=4                " a tab is just simply 4 spaces.
 set expandtab
 set number
-set clipboard=unnamedplus      " Use system clipboard 
+set clipboard=unnamedplus       " Use system clipboard 
+set tags=tags;/                 " Allow vim to find ctags even in subdirs"
 
 let base16colorspace=256
 let livepreview_previewer = 'zathura' 
@@ -65,5 +65,7 @@ Plugin 'nlknguyen/papercolor-theme'
 Plugin 'dracula/vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'junegunn/goyo.vim'
+Plugin 'tpope/vim-fugitive'
+
 
 call vundle#end()            
