@@ -13,26 +13,3 @@ Acquire and move into the git repository, then stow all the files with:
 `git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow `
 
 
-### Troubleshooting
-
-**Tip:** *Stow will get confused if it sees existing dotfiles on your system.* Here's an example warning of trying to stow a dotfile when one of the same name already exists on our system.
-
-`WARNING! stowing zsh would cause conflicts:     
-existing target is neither a link nor a directory: .zprofile                                
-All operations aborted. `
-
-Backup the file:
-
-`mkdir ~/backup`
-`cd ~/ `
-`cp ./.zprofile ~/backup `
-
-Then try stow again.
-
-## Further reading:
-GNU Stow
-
-Git
-
-Package Managers
-
