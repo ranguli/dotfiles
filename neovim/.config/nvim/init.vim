@@ -28,14 +28,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_mode_map = { 
-    \ "mode": 'active', 
-    \ 'passive_filetypes': ['python', 'javascript']}
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " Airline configuration 
 let g:airline_powerline_fonts = 1
@@ -70,6 +63,11 @@ noremap <C-k> <C-w>k
 vnoremap < <gv 
 vnoremap > >gv 
 
+" Mapping to use Tagbar
+nmap <F8> :TagbarToggle<CR>
+nmap <F7> :UpdateTags<CR>
+nmap <F5> :NERDTreeToggle<CR>
+
 call plug#begin()
 
 Plug  'raimondi/delimitmate'
@@ -77,14 +75,15 @@ Plug  'chriskempson/base16-vim'
 Plug  'tpope/vim-fugitive'
 Plug  'tpope/vim-surround'
 Plug  'lsdr/monokai'
-Plug  'Valloric/YouCompleteMe'
-Plug  'scrooloose/syntastic'
-
-"NerdTree for file trees
-Plug  'scrooloose/nerdtree' 
-
-"Airline with themes
+Plug  'Valloric/YouCompleteMe' " Code completion
+Plug  'scrooloose/syntastic'   " Syntax checking
+Plug  'scrooloose/nerdtree'    " File tree
+Plug  'tpope/vim-surround'     
+Plug  'majutsushi/tagbar'
 Plug  'vim-airline/vim-airline'
 Plug  'vim-airline/vim-airline-themes'
+Plug  'xolox/vim-easytags'
+Plug  'xolox/vim-misc'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()            
