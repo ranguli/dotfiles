@@ -1,3 +1,5 @@
-neovim/.config/nvim/plugged
+neovim/.config/nvim/
+neovim/neovim
+neovim/ctags
 logs/
 *.swp
