@@ -1,5 +1,5 @@
 "
-"   ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+
 "   ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
 "   ██║   ██║██║██╔████╔██║██████╔╝██║     
 "   ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║     
@@ -14,6 +14,7 @@ filetype plugin indent on
 filetype plugin on
 syntax on
 
+set t_Co=256
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 set nocompatible                
 set tw=79
@@ -92,5 +93,5 @@ Plug  'vim-airline/vim-airline-themes'
 Plug  'xolox/vim-easytags'
 Plug  'xolox/vim-misc'
 Plug 'scrooloose/nerdcommenter'
-
+Plug 'yuttie/comfortable-motion.vim'
 call plug#end()            

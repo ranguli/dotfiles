@@ -1,4 +1,0 @@
-Host github.com-ranguli
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/github_laptop

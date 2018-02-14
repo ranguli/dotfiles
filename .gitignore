@@ -3,3 +3,4 @@ neovim/neovim
 neovim/ctags
 logs/
 *.swp
+.oh-my-zsh/
