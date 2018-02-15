@@ -1,5 +1,4 @@
-
-exec compton
+exec compton --config ~/.config/compton.conf
 exec polybar example
 
 gaps inner 40 

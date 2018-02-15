@@ -1,3 +1,5 @@
+stow scripts
+
 mkdir -p ~/.fonts 
 wget https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20Medium%20for%20Powerline.otf 
 mv "Source Code Pro Medium for Powerline.otf" ~/.fonts

@@ -1,4 +1,0 @@
-remove Lock = 0xff1b
-keysym 0xff1b = Control_L
-
-
