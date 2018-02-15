@@ -1,5 +1,4 @@
 "
-
 "   ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
 "   ██║   ██║██║██╔████╔██║██████╔╝██║     
 "   ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║     
@@ -23,8 +22,7 @@ set shiftwidth=4                " A tab is just simply 4 spaces.
 set expandtab
 set number
 set clipboard=unnamedplus       " Use system clipboard 
-set tags=tags;/                 " Allow vim to find ctags even in subdirs"
-
+set tags=tags;/                 " Allow vim to find ctags even in subdirs" 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -94,4 +92,6 @@ Plug  'xolox/vim-easytags'
 Plug  'xolox/vim-misc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/goyo.vim'
 call plug#end()            
