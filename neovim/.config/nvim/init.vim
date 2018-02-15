@@ -45,9 +45,6 @@ set noswapfile
 " Misc. definitions 
 let g:tex_conceal = ""
 let base16colorspace=256
-let livepreview_previewer = 'zathura' 
-let g:livepreview_previewer = 'zathura'
-
 
 " Use space instead of Shift-Colon!
 noremap <Space> :
@@ -66,6 +63,10 @@ vnoremap > >gv
 nmap <F8> :TagbarToggle<CR>
 nmap <F7> :UpdateTags<CR>
 nmap <F5> :NERDTreeToggle<CR>
+
+" Focus mode with Goyo
+nmap <F1> :Goyo<CR>
+
 
 "Ensure that vim-plug is installed
 if empty(glob('~/.vim/autoload/plug.vim'))
