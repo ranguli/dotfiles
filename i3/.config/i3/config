@@ -6,14 +6,6 @@ gaps outer 150
 smart_gaps on
 smart_borders on
 
-#Set the default i3 bar to hidden (because we want to use polybar)
-
-#bar {
-#    mode 		invisible
-#    hidden_state	hide
-#    modifier		none
-#}
-
 set $mod Mod4
 
 #font pango:Anonymous Pro 10 
@@ -131,6 +123,10 @@ bindsym $mod+r mode "resize"
 
 new_window 1pixel
 
+
+bar {
+    status_command i3status
+}
 ## Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
 #
