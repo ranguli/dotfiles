@@ -1,6 +1,5 @@
 exec compton --config ~/.config/compton.conf
 exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg
-exec polybar 
 
 gaps inner 40
 gaps outer 150
@@ -8,11 +7,12 @@ smart_gaps on
 smart_borders on
 
 #Set the default i3 bar to hidden (because we want to use polybar)
-bar {
-    mode 		invisible
-    hidden_state	hide
-    modifier		none
-}
+
+#bar {
+#    mode 		invisible
+#    hidden_state	hide
+#    modifier		none
+#}
 
 set $mod Mod4
 

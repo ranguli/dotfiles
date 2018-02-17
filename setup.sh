@@ -8,8 +8,8 @@ mv ./fontawesome-free-5.0.6/use-on-desktop/Font\ Awesome\ 5\ Free-Regular-400.ot
 mv "Source Code Pro Medium for Powerline.otf" ~/.fonts
 fc-cache -fv
 
-#xrdb -load ~/.Xresources 
+xrdb -load ~/.Xresources 
 
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#stow zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+stow zsh
 

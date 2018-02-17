@@ -48,7 +48,7 @@ cd ~/dotfiles
 stow neovim
 nvim +PlugInstall +qa
 
-cd ./ctags && ./autogen.sh
+cd ./neovim/ctags && ./autogen.sh
 ./configure && make -j8 && sudo make install 
 
 cd ~/.config/nvim/plugged/YouCompleteMe
