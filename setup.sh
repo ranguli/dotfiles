@@ -14,3 +14,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 stow zsh
 
 sudo systemctl enable NetworkManager.service
+sudo cat ips >> /etc/hosts
