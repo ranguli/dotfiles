@@ -3,4 +3,7 @@ neovim/neovim
 neovim/ctags
 logs/
 *.swp
+*.zip
 .oh-my-zsh/
+DejaVu Sans Mono for Powerline.ttf
+Source Code Pro Medium for Powerline.otf.1

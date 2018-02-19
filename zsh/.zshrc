@@ -8,8 +8,10 @@ alias vim='nvim'
 alias vi='nvim'
 alias i3c='vim ~/.config/i3/config'
 
-# Path to your oh-my-zsh installation.
 export ZSH=/home/joshua/dotfiles/.oh-my-zsh
+PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+MANPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$MANPATH
+INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
