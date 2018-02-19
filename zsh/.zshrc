@@ -1,9 +1,12 @@
 export EDITOR=nvim
+
+# Enables vi mode in zsh
+bindkey -v
+
+# Aliases:
 alias vim='nvim'
 alias vi='nvim'
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+alias i3c='vim ~/.config/i3/config'
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/joshua/dotfiles/.oh-my-zsh
