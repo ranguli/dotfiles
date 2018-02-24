@@ -1,5 +1,9 @@
+# Make sure our scripts sub-repo gets installed
+git submodule init
+git submodule update
 stow scripts
 
+# Install our fonts of choice
 mkdir -p ~/.fonts 
 wget https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20Medium%20for%20Powerline.otf 
 wget https://use.fontawesome.com/releases/v5.0.6/fontawesome-free-5.0.6.zip
@@ -8,18 +12,22 @@ mv ./fontawesome-free-5.0.6/use-on-desktop/Font\ Awesome\ 5\ Free-Regular-400.ot
 mv "Source Code Pro Medium for Powerline.otf" ~/.fonts
 fc-cache -fv
 
+# Configure urxvt and zsh
 xrdb -load ~/.Xresources 
-
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-stow zsh
 
-sudo systemctl enable NetworkManager.service
+# Install texlive, my LaTeX distrubution of choice
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar -xvf install-tl-unx.tar.gz
+rm install-tl-unx.tar.gz
+sudo ./install-tl-20180224/install-tl
+rm -r ./install-tl-20180224/
 
-# Do some things as root. These are saved for last to avoid the chances of us running everything else root:
+# Danger zone:
 sudo su root
+echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
+sudo cat ips >> /etc/hosts # Anti ads, analytics, trackers, non-RYF sites
 
-# Blacklist the kernel module for the PC speaker on my office workstation - what an annoying thing it is!
-echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf
-# Blacklist a whole ton of websites that are known ad providers, spam, or don't RYF
-sudo cat ips >> /etc/hosts
+# Setup NetworkManager, nmcli/nmtui for wifi management  
+sudo systemctl enable NetworkManager.service
 

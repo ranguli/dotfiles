@@ -1,3 +1,21 @@
-git stow firefox i3-gaps compton rxvt-unicode unzip rofi python-pip feh
-pacaur msmtp msmtp-mta neovim openssh
-
+git 
+stow 
+firefox 
+i3-gaps 
+compton 
+rxvt-unicode 
+unzip 
+rofi 
+python-pip 
+feh 
+mpv
+pacaur 
+msmtp 
+msmtp-mta 
+neovim 
+openssh 
+qutebrowser 
+ranger 
+xcape
+zathura
+pandoc
