@@ -6,8 +6,6 @@ gaps outer 60
 
 set $mod Mod4
 
-bindsym $mod+w exec qutebrowser 
-bindsym $mod+e exec mutt 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -125,6 +123,8 @@ new_window 1pixel
 bar {
     status_command i3status
 }
+
+workspace 1 output DVI-D-1
 
 ## Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)

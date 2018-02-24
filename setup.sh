@@ -14,4 +14,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 stow zsh
 
 sudo systemctl enable NetworkManager.service
+
+# Do some things as root. These are saved for last to avoid the chances of us running everything else root:
+sudo su root
+
+# Blacklist the kernel module for the PC speaker on my office workstation - what an annoying thing it is!
+echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf
+# Blacklist a whole ton of websites that are known ad providers, spam, or don't RYF
 sudo cat ips >> /etc/hosts
+
