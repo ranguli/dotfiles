@@ -6,6 +6,13 @@ Install `stow` and `git` then:
 
 `git clone --recursive https://github.com/ranguli/dotfiles && cd ./dotfiles && stow `
 
+To install the package manifest, run ` sudo pacman -S $(cat manifest.pacman) `
+This will install common packages as well as `pacaur`, which is my AUR helper of choice. Run:
+` pacaur -S $(cat manifest.pacuar) ` to install the AUR packages of choice.
+
+I prefer this method of keeping track of my packages over using `pacman` to output a manifest because it's cumbersome and 
+keeps track of *every* package and their version, 85% of which I don't care about and are installed by default. It's also more cumbersome to manually update that exported file.
+ 
 Or clone and copy things manually if you don't have `stow`.
 
 ## What are dotfiles?
