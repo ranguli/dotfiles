@@ -6,10 +6,7 @@ gaps outer 60
 
 set $mod Mod4
 
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Source Code Pro Medium for Powerline
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -121,10 +118,11 @@ bindsym $mod+r mode "resize"
 new_window 1pixel
 
 bar {
-    status_command i3status
+    status_command i3status  
+    font pango: Source Code Pro Variable for Powerline 8
 }
 
-workspace 1 output DVI-D-1
+workspace 1 output VGA-1 
 
 ## Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
