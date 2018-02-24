@@ -8,7 +8,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias i3c='vim ~/.config/i3/config'
 
-export ZSH=/home/joshua/dotfiles/.oh-my-zsh
+export ZSH=/home/joshua/.oh-my-zsh/
 PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
 MANPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$MANPATH
 INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
