@@ -28,6 +28,7 @@ sudo su root
 echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
 sudo cat ips >> /etc/hosts # Anti ads, analytics, trackers, non-RYF sites
 
-# Setup NetworkManager, nmcli/nmtui for wifi management  
-sudo systemctl enable NetworkManager.service
+# Setup NetworkManager, nmcli/nmtui for eth/wifi management  
+systemctl enable NetworkManager
+systemctl start NetworkManager
 

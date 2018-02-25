@@ -3,7 +3,7 @@ URxvt*font: xft:Source Code Pro for Powerline:style=medium:size=10
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
 URxvt.depth: 32
-URxvt*background: rgba:0000/0000/0200/c500
+!URxvt*background: rgba:0000/0000/0200/c000
 
 xterm*VT100.Translations: #override \
 	Crtl Shift <Key>V: 	insert-selection(CLIPBOARD) \n\

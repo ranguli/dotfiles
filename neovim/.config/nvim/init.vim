@@ -26,7 +26,6 @@ set tags=tags;/                 " Allow vim to find ctags even in subdirs"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " Airline configuration 
@@ -45,6 +44,7 @@ set noswapfile
 " Misc. definitions 
 let g:tex_conceal = ""
 let base16colorspace=256
+
 
 " Use space instead of Shift-Colon!
 noremap <Space> :
@@ -95,4 +95,36 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/seoul256.vim'
+
 call plug#end()            
+
+
+" Configuration for Limelight.vim
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 1
+
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+let g:limelight_priority = -1
+
+autocmd vimenter * Goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
