@@ -23,6 +23,9 @@ rm install-tl-unx.tar.gz
 sudo ./install-tl-20180224/install-tl
 rm -r ./install-tl-20180224/
 
+# Install tmux plugin manager - not that we really use it anymore
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Danger zone:
 sudo su root
 echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
