@@ -1,6 +1,8 @@
 #!/bin/sh
 
 ~/.scripts/xcape.sh
+~/.scripts/screen_layout_office.sh
+
 xrdb ~/.Xresources
 exec i3
 exec compton --config ~/.config/compton.conf
