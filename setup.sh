@@ -26,10 +26,13 @@ rm -r ./install-tl-20180224/
 # Install tmux plugin manager - not that we really use it anymore
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Download NordVPN server list
+wget https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip
+
 # Danger zone:
 sudo su root
 echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
-sudo cat ips >> /etc/hosts # Anti ads, analytics, trackers, non-RYF sites
+cat ips >> /etc/hosts # Anti ads, analytics, trackers, non-RYF sites
 
 # Setup NetworkManager, nmcli/nmtui for eth/wifi management  
 systemctl enable NetworkManager

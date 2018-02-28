@@ -9,7 +9,7 @@ rofi
 python-pip 
 feh 
 mpv
-pacaur 
+yay
 msmtp 
 msmtp-mta 
 neovim 
@@ -33,6 +33,8 @@ offlineimap
 dialog
 docker
 docker-compose
-mulitail
 zeal
-zeal
+aspell
+guile2.0
+ruby
+pulseaudio

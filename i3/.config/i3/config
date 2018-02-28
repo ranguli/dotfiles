@@ -50,7 +50,7 @@ bindsym $mod+f                  fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s                 layout stacking
 bindsym $mod+t                  layout tabbed
-bindsym $mod+Shift+e                  layout toggle split
+bindsym $mod+Shift+e            layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space        floating toggle
@@ -120,7 +120,7 @@ bindsym $mod+Shift+r            exec $term -e sudo ranger
 bindsym $mod+w                  exec qutebrowser
 bindsym $mod+e                  exec $term -e neomutt
 
-# Any lower then this and it's hard to tell what window is focused!
+# Any lower then this and it's hard to tell what window is focused
 new_window pixel 4
 
 bar {

@@ -95,8 +95,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
 
 call plug#end()            
 
@@ -126,5 +124,3 @@ let g:limelight_eop = '\ze\n^\s'
 let g:limelight_priority = -1
 
 autocmd vimenter * Goyo
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
