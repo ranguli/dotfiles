@@ -120,7 +120,8 @@ bindsym $mod+Shift+r            exec $term -e sudo ranger
 bindsym $mod+w                  exec qutebrowser
 bindsym $mod+e                  exec $term -e neomutt
 
-new_window 1pixel
+# Any lower then this and it's hard to tell what window is focused!
+new_window pixel 4
 
 bar {
     status_command i3status  
