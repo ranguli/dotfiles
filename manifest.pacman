@@ -14,6 +14,7 @@ msmtp
 msmtp-mta 
 neovim 
 openssh 
+openvpn
 qutebrowser 
 ranger 
 xcape
@@ -38,3 +39,4 @@ aspell
 guile2.0
 ruby
 pulseaudio
+i3status
