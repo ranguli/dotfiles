@@ -2,11 +2,12 @@
 
 ~/.scripts/xcape.sh
 ~/.scripts/screen_layout_office.sh
-
 xrdb ~/.Xresources
+
 exec i3
 exec compton --config ~/.config/compton.conf
 exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg
+exec unclutter 
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
