@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Dotfiles - neovim.sh 
+# Author: Joshua Murphy
+# Github: https://github.com/ranguli/dotfiles
+# Custom build script for the neovim editor. Currently supports
+# Ubuntu, Fedora, and Arch Linux.
+
 function script_cleanup () {
    rm -rf ./ctags
    rm -rf ./neovim

@@ -1,3 +1,8 @@
+# Dotfiles - i3 config
+# Author: Joshua Murphy
+# Github: https://github.com/ranguli/dotfiles
+# Config file for the i3 tiling wm (running the i3-gaps fork)
+
 # Start compositor (for terminal transparency) 
 exec compton --config ~/.config/compton.conf
 # Set desktop wallpaper

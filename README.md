@@ -1,4 +1,5 @@
 # dotfiles
+
 My personal dotfiles, currently for Fedora. Now with GNU Stow support.
 
 ## Install & Usage:
@@ -8,7 +9,7 @@ Install `stow` and `git` then:
 
 To install the package manifest, run ` sudo pacman -S $(cat manifest.pacman) `
 This will install common packages as well as `pacaur`, which is my AUR helper of choice. Run:
-` pacaur -S $(cat manifest.pacuar) ` to install the AUR packages of choice.
+` pacaur --force -S $(cat manifest.pacuar) ` to install the AUR packages of choice.
 
 To uninstall any pre-installed packages we don't want/need, run ` sudo pacman
 -Rc $(cat blacklist.pacman)`

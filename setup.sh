@@ -1,3 +1,12 @@
+# Dotfiles - setup.sh
+# Author: Joshua Murphy
+# Date: March 1st, 2018
+# Licensed under the GNU GPL v3.
+# https://github.com/ranguli/dotfiles
+
+# Setup script for new installs. Distro agnostic, does not install 
+# required packages, that's what manifest.pacman is for.
+
 # Make sure our scripts sub-repo gets installed
 git submodule init
 git submodule update

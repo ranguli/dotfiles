@@ -1,7 +1,12 @@
 #!/bin/sh
 
-~/.scripts/xcape.sh
-~/.scripts/screen_layout_office.sh
+# Dotfiles - .xinitrc
+# Author: Joshua Murphy
+# Github: https://github.com/ranguli/dotfiles
+# Configures what to do when X11 starts. 
+
+~/dotfiles/scripts/xcape.sh
+~/dotfiles/scripts/screen_layout_office.sh
 xrdb ~/.Xresources
 
 exec i3

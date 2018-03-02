@@ -1,3 +1,8 @@
+! Dotfiles - .Xresources 
+! Author: Joshua Murphy
+! Github: https://github.com/ranguli/dotfiles
+! Config file for X11 terminals, such as urxvt
+
 URxvt*font: xft:Source Code Pro for Powerline:style=medium:size=10
 
 URxvt.letterSpace: -1

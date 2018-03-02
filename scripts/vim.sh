@@ -1,3 +1,12 @@
+# Dotfiles - vim.sh
+# Author: Joshua Murphy
+# Date: March 1st, 2018
+# Licensed under the GNU GPL v3.
+# https://github.com/ranguli/dotfiles
+
+# Old build script with my compiler flags for the Vim editor.
+# This is obsolote now because I switched to neovim
+
 sudo apt-get remove vim vim-runtime vim-gtk vim-gtk3
 
 sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
@@ -5,9 +14,6 @@ sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
     libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
     python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git checkinstall
 
-
-
-#Obtain the latest version of Vim's source and then compile it to our own specs
 cd ~
 git clone https://github.com/vim/vim.git
 cd vim
