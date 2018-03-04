@@ -130,7 +130,7 @@ bindsym $mod+e                  exec $term -e neomutt
 new_window pixel 4
 
 bar {
-    status_command i3status  
+    status_command i3status -c ~/.config/i3status/config 
     font pango: Source Code Pro Variable for Powerline 8
 }
 
