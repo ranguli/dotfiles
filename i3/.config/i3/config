@@ -12,20 +12,20 @@ exec --no-startup-id unclutter                                      # Makes mous
 
 # User applications
 # -----------------
-set $browser                    firefox                             # Web browser
-set $mail                       neomutt                             # Email client 
-set $term                       urxvt                               # Terminal
-set $torrent                    rtorrent                            # P2P client
-set $fileman                    ranger                              # File manager
-set $launcher                   rofi -show run                                # Application launcher
+set $browser                    firefox                             
+set $term                       urxvt                               
+set $torrent                    rtorrent                            
+set $fileman                    ranger                              
+set $launcher                   rofi -show run                                
 set $mod                        Mod4
+set $music                      ncmpcpp
 set $shutdown                   exec sudo shutdown -h now
 set $reboot                     exec sudo reboot 
 floating_modifier               $mod
   
 # Window settings
 # ---------------
-workspace 1                     output VGA-1                        # Force workspace 1 to our left monitor
+workspace $ws1                  output VGA-1 
 new_window pixel                4                                  
 
 bindsym $mod+j                  focus left    
@@ -66,56 +66,76 @@ bar {
 gaps inner                      40
 gaps outer                      60 
 
-bindsym $mod+s                  gaps inner current plus 5
-bindsym $mod+Shift+s            gaps inner current minus 5
-bindsym $mod+x                  gaps outer current plus 5
-bindsym $mod+Shift+x            gaps outer current minus 5
-bindsym $mod+g                  gaps outer current minus 100; gaps inner current minus 100
+bindsym $mod+s                  gaps inner current plus 10
+bindsym $mod+Shift+s            gaps inner current minus 10
+bindsym $mod+x                  gaps outer current plus 10
+bindsym $mod+Shift+x            gaps outer current minus 10
+bindsym $mod+g                  gaps outer current set 0; gaps inner current set 0 
 bindsym $mod+Shift+g            gaps outer current plus 40; gaps inner current plus 40
 
 
 # Workspace settings
 # ------------------
-bindsym $mod+1                  workspace 1
-bindsym $mod+2                  workspace 2
-bindsym $mod+3                  workspace 3
-bindsym $mod+4                  workspace 4
-bindsym $mod+5                  workspace 5
-bindsym $mod+6                  workspace 6
-bindsym $mod+7                  workspace 7
-bindsym $mod+8                  workspace 8
-bindsym $mod+9                  workspace 9
-bindsym $mod+0                  workspace 10
+set $ws1                        "term"
+set $ws2                        "web"
+set $ws3                        "ssh"
+set $ws4                        "chat"
+set $ws5                        "dl"
+set $ws6                        "writing"
+set $ws7                        "video"
+set $ws8                        "blender"
+set $ws9                        "gimp"
+set $ws10                       "music"
 
-bindsym $mod+Shift+1            move container to workspace 1
-bindsym $mod+Shift+2            move container to workspace 2
-bindsym $mod+Shift+3            move container to workspace 3
-bindsym $mod+Shift+4            move container to workspace 4
-bindsym $mod+Shift+5            move container to workspace 5
-bindsym $mod+Shift+6            move container to workspace 6
-bindsym $mod+Shift+7            move container to workspace 7
-bindsym $mod+Shift+8            move container to workspace 8
-bindsym $mod+Shift+9            move container to workspace 9
-bindsym $mod+Shift+0            move container to workspace 10
+bindsym $mod+1                  workspace $ws1
+bindsym $mod+2                  workspace $ws2
+bindsym $mod+3                  workspace $ws3
+bindsym $mod+4                  workspace $ws4
+bindsym $mod+5                  workspace $ws5
+bindsym $mod+6                  workspace $ws6
+bindsym $mod+7                  workspace $ws7
+bindsym $mod+8                  workspace $ws8
+bindsym $mod+9                  workspace $ws9
+bindsym $mod+0                  workspace $ws10
 
+bindsym $mod+Shift+1            move container to workspace $ws1 
+bindsym $mod+Shift+2            move container to workspace $ws2 
+bindsym $mod+Shift+3            move container to workspace $ws3 
+bindsym $mod+Shift+4            move container to workspace $ws4 
+bindsym $mod+Shift+5            move container to workspace $ws5 
+bindsym $mod+Shift+6            move container to workspace $ws6 
+bindsym $mod+Shift+7            move container to workspace $ws7 
+bindsym $mod+Shift+8            move container to workspace $ws8 
+bindsym $mod+Shift+9            move container to workspace $ws9 
+bindsym $mod+Shift+0            move container to workspace $ws10 
 
+workspace $ws2                  gaps inner 0
+workspace $ws2                  gaps outer 0
+
+for_window [class="Firefox"]    move to workspace $ws2
+for_window [title="weechat"]    move to workspace $ws4
+for_window [class="mpv"]        move to workspace $ws7
+for_window [class="Blender"]    move to workspace $ws8
+for_window [class="Gimp"]       move to workspace $ws9
+for_window [title="ncmpcpp"]    move to workspace $ws10
 
 # User keybindings
 # ----------------
 bindsym $mod+r                  exec $term -e $fileman              # Open file manager 
-bindsym $mod+Shift+r            exec $term -e sudo $fileman         # Open file manager with root permissions
+bindsym $mod+Shift+r            exec $term -e sudo $fileman          
 bindsym $mod+w                  exec $browser                       # Open browser
 bindsym $mod+e                  exec $term -e $mail                 # Run mail client
 bindsym $mod+Return             exec $term                          # Run terminal
 bindsym $mod+q                  kill                                
 bindsym $mod+d                  exec $launcher                      # Run program launcher  
 bindsym $mod+Shift+c            reload                              # reload the configuration file
-bindsym $mod+Shift+Escape       restart                             # restart i3 inplace 
+bindsym $mod+Shift+Delete       restart                             # restart i3 inplace 
 
 
+# Color Scheme
+# ------------
 
-## Base16 Default Dark
-# Author: Chris Kempson (http://chriskempson.com)
+# Base16 Default Dark (Chris Kempson: http://chriskempson.com)
 set $base00                     #181818
 set $base01                     #282828
 set $base02                     #383838
