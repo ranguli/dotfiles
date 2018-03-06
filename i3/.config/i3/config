@@ -17,15 +17,15 @@ set $term                       urxvt
 set $torrent                    rtorrent                            
 set $fileman                    ranger                              
 set $launcher                   rofi -show run                                
-set $mod                        Mod4
+set $mail                       neomutt
 set $music                      ncmpcpp
-set $shutdown                   exec sudo shutdown -h now
-set $reboot                     exec sudo reboot 
+set $mod                        Mod4
 floating_modifier               $mod
   
 # Window settings
 # ---------------
 workspace $ws1                  output VGA-1 
+workspace $ws2                  output DVI-D-1 
 new_window pixel                4                                  
 
 bindsym $mod+j                  focus left    
@@ -76,16 +76,16 @@ bindsym $mod+Shift+g            gaps outer current plus 40; gaps inner current p
 
 # Workspace settings
 # ------------------
-set $ws1                        "term"
-set $ws2                        "web"
-set $ws3                        "ssh"
-set $ws4                        "chat"
-set $ws5                        "dl"
-set $ws6                        "writing"
-set $ws7                        "video"
-set $ws8                        "blender"
-set $ws9                        "gimp"
-set $ws10                       "music"
+set $ws1                        "1: term"
+set $ws2                        "2: web"
+set $ws3                        "3: ssh"
+set $ws4                        "4: mail"
+set $ws5                        "5: chat"
+set $ws6                        "6: writing"
+set $ws7                        "7: video"
+set $ws8                        "8: blender"
+set $ws9                        "9: gimp"
+set $ws10                       "10: music"
 
 bindsym $mod+1                  workspace $ws1
 bindsym $mod+2                  workspace $ws2
@@ -112,8 +112,10 @@ bindsym $mod+Shift+0            move container to workspace $ws10
 workspace $ws2                  gaps inner 0
 workspace $ws2                  gaps outer 0
 
+#for_window [title="urxvt"]      move to workspace $ws1
 for_window [class="Firefox"]    move to workspace $ws2
-for_window [title="weechat"]    move to workspace $ws4
+for_window [title="weechat"]    move to workspace $ws5
+for_window [title="neomutt"]    move to workspace $ws4
 for_window [class="mpv"]        move to workspace $ws7
 for_window [class="Blender"]    move to workspace $ws8
 for_window [class="Gimp"]       move to workspace $ws9
