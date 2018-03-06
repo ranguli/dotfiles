@@ -17,7 +17,7 @@ set $mail                       neomutt                             # Email clie
 set $term                       urxvt                               # Terminal
 set $torrent                    rtorrent                            # P2P client
 set $fileman                    ranger                              # File manager
-set $launcher                   rofi                                # Application launcher
+set $launcher                   rofi -show run                                # Application launcher
 set $mod                        Mod4
 set $shutdown                   exec sudo shutdown -h now
 set $reboot                     exec sudo reboot 
@@ -108,7 +108,7 @@ bindsym $mod+w                  exec $browser                       # Open brows
 bindsym $mod+e                  exec $term -e $mail                 # Run mail client
 bindsym $mod+Return             exec $term                          # Run terminal
 bindsym $mod+q                  kill                                
-bindsym $mod+d exec             $launcher -show run                 # Run program launcher  
+bindsym $mod+d                  exec $launcher                      # Run program launcher  
 bindsym $mod+Shift+c            reload                              # reload the configuration file
 bindsym $mod+Shift+Escape       restart                             # restart i3 inplace 
 
