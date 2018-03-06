@@ -9,16 +9,15 @@ Install `stow` and `git` then:
 
 To install the package manifest:
 
-` sudo pacman -S $(cat manifest.pacman) `
+`sudo pacman -S $(cat manifest.pacman)`
 
 That will install common packages as well as `yay`, which is my AUR helper of choice. To install our AUR packages: 
 
-` yay --force -S $(cat manifest.yay) ` 
-to install the AUR packages of choice.
+`yay --force -S $(cat manifest.yay) ` 
 
 To uninstall any pre-installed packages we don't want/need:
 
-` sudo pacman -Rc $(cat blacklist.pacman)`
+`sudo pacman -Rc $(cat blacklist.pacman)`
 
 I prefer this method of keeping track of my packages over using `pacman` 
 to output a manifest because it's cumbersome and keeps track of *every* 
