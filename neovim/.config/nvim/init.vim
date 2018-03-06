@@ -27,6 +27,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" setlocal fo+=aw                 " Better formatting from writing Mail with Mutt
 
 " Airline configuration 
 let g:airline_powerline_fonts = 1
