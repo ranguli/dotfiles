@@ -107,7 +107,7 @@ bindsym $mod+Shift+r            exec $term -e sudo $fileman         # Open file 
 bindsym $mod+w                  exec $browser                       # Open browser
 bindsym $mod+e                  exec $term -e $mail                 # Run mail client
 bindsym $mod+Return             exec $term                          # Run terminal
-bindsym $mod+q                  kill                                # Quit currently focused window
+bindsym $mod+q                  kill                                
 bindsym $mod+d exec             $launcher -show run                 # Run program launcher  
 bindsym $mod+Shift+c            reload                              # reload the configuration file
 bindsym $mod+Shift+Escape       restart                             # restart i3 inplace 
