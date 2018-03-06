@@ -10,6 +10,10 @@ exec compton --config ~/.config/compton.conf                        # Start comp
 exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg    # Set desktop wallpaper
 exec --no-startup-id unclutter                                      # Makes mouse dissapear if not used recently 
 
+# Scratchpad Settings
+# -------------------
+
+
 # User applications
 # -----------------
 set $browser                    firefox                             # Web browser
@@ -76,16 +80,28 @@ bindsym $mod+Shift+g            gaps outer current plus 40; gaps inner current p
 
 # Workspace settings
 # ------------------
-bindsym $mod+1                  workspace 1
-bindsym $mod+2                  workspace 2
-bindsym $mod+3                  workspace 3
-bindsym $mod+4                  workspace 4
-bindsym $mod+5                  workspace 5
-bindsym $mod+6                  workspace 6
-bindsym $mod+7                  workspace 7
-bindsym $mod+8                  workspace 8
-bindsym $mod+9                  workspace 9
-bindsym $mod+0                  workspace 10
+
+set $ws1 term
+set $ws2 web
+set $ws3 ssh 
+set $ws4 chat 
+set $ws5 dl 
+set $ws6 writing 
+set $ws7 video 
+set $ws8 blender 
+set $ws9 gimp 
+set $ws10 music
+
+bindsym $mod+1                  workspace 1: $ws1
+bindsym $mod+2                  workspace 2: $ws2
+bindsym $mod+3                  workspace 3: $ws3
+bindsym $mod+4                  workspace 4: $ws4
+bindsym $mod+5                  workspace 5: $ws5
+bindsym $mod+6                  workspace 6: $ws6
+bindsym $mod+7                  workspace 7: $ws7
+bindsym $mod+8                  workspace 8: $ws8
+bindsym $mod+9                  workspace 9: $ws9
+bindsym $mod+0                  workspace 10: $ws10
 
 bindsym $mod+Shift+1            move container to workspace 1
 bindsym $mod+Shift+2            move container to workspace 2
@@ -98,7 +114,8 @@ bindsym $mod+Shift+8            move container to workspace 8
 bindsym $mod+Shift+9            move container to workspace 9
 bindsym $mod+Shift+0            move container to workspace 10
 
-
+workspace $ws2 gaps inner 0
+workspace $ws2 gaps outer 0
 
 # User keybindings
 # ----------------
