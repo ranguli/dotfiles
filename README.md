@@ -1,21 +1,29 @@
 # dotfiles
 
-My personal dotfiles, currently for Fedora. Now with GNU Stow support.
+My personal dotfiles. Previously for Ubuntu/Fedora but now for Manjaro, with GNU Stow support.
 
 ## Install & Usage:
 Install `stow` and `git` then:
 
 `git clone --recursive https://github.com/ranguli/dotfiles && cd ./dotfiles && stow `
 
-To install the package manifest, run ` sudo pacman -S $(cat manifest.pacman) `
-This will install common packages as well as `pacaur`, which is my AUR helper of choice. Run:
-` pacaur --force -S $(cat manifest.pacuar) ` to install the AUR packages of choice.
+To install the package manifest:
 
-To uninstall any pre-installed packages we don't want/need, run ` sudo pacman
--Rc $(cat blacklist.pacman)`
+`sudo pacman -S $(cat manifest.pacman)`
 
-I prefer this method of keeping track of my packages over using `pacman` to output a manifest because it's cumbersome and 
-keeps track of *every* package and their version, 85% of which I don't care about and are installed by default. It's also more cumbersome to manually update that exported file.
+That will install common packages as well as `yay`, which is my AUR helper of choice. To install our AUR packages: 
+
+`yay --force -S $(cat manifest.yay) ` 
+
+To uninstall any pre-installed packages we don't want/need:
+
+`sudo pacman -Rc $(cat blacklist.pacman)`
+
+I prefer this method of keeping track of my packages over using `pacman` 
+to output a manifest because it's cumbersome and keeps track of *every* 
+package and their version, 85% of which I don't care about and are 
+installed by default. It's also more cumbersome to manually update that 
+exported file.
  
 Or clone and copy things manually if you don't have `stow`.
 
