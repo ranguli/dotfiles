@@ -6,9 +6,12 @@
 # Startup Settings
 # ----------------
 font pango:Source Code Pro Medium for Powerline
-exec compton --config ~/.config/compton.conf                        # Start compositor (for terminal transparency) 
-exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg    # Set desktop wallpaper
-exec --no-startup-id unclutter                                      # Makes mouse dissapear if not used recently 
+# Start compositor (for terminal transparency) 
+exec compton --config ~/.config/compton.conf                        
+# Set desktop wallpaper
+exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg    
+# Makes mouse dissapear if not used recently 
+exec --no-startup-id unclutter                                      
 
 # User applications
 # -----------------
@@ -112,7 +115,6 @@ bindsym $mod+Shift+0            move container to workspace $ws10
 workspace $ws2                  gaps inner 0
 workspace $ws2                  gaps outer 0
 
-#for_window [title="urxvt"]      move to workspace $ws1
 for_window [class="Firefox"]    move to workspace $ws2
 for_window [title="weechat"]    move to workspace $ws5
 for_window [title="neomutt"]    move to workspace $ws4
@@ -123,21 +125,26 @@ for_window [title="ncmpcpp"]    move to workspace $ws10
 
 # User keybindings
 # ----------------
-bindsym $mod+r                  exec $term -e $fileman              # Open file manager 
+# Open file manager 
+bindsym $mod+r                  exec $term -e $fileman              
 bindsym $mod+Shift+r            exec $term -e sudo $fileman          
-bindsym $mod+w                  exec $browser                       # Open browser
-bindsym $mod+e                  exec $term -e $mail                 # Run mail client
-bindsym $mod+Return             exec $term                          # Run terminal
+# Open browser
+bindsym $mod+w                  exec $browser                       
+# Run mail client
+bindsym $mod+e                  exec $term -e $mail                 
+# Run terminal
+bindsym $mod+Return             exec $term                          
+# Kill focused window
 bindsym $mod+q                  kill                                
-bindsym $mod+d                  exec $launcher                      # Run program launcher  
-bindsym $mod+Shift+c            reload                              # reload the configuration file
-bindsym $mod+Shift+Delete       restart                             # restart i3 inplace 
-
+# Run program launcher  
+bindsym $mod+d                  exec $launcher                      
+# reload the configuration file
+bindsym $mod+Shift+c            reload                              
+# restart i3 inplace 
+bindsym $mod+Shift+Delete       restart                             
 
 # Color Scheme
 # ------------
-
-# Base16 Default Dark (Chris Kempson: http://chriskempson.com)
 set $base00                     #181818
 set $base01                     #282828
 set $base02                     #383838
@@ -154,3 +161,5 @@ set $base0C                     #86c1b9
 set $base0D                     #7cafc2
 set $base0E                     #ba8baf
 set $base0F                     #a16946
+# Base16 Default Dark (Chris Kempson: http://chriskempson.com)
+
