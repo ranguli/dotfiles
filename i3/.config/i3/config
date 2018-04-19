@@ -3,19 +3,17 @@
 # Github: https://github.com/ranguli/dotfiles
 # Config file for the i3 tiling wm (running the i3-gaps fork)
 
-# Startup Settings
-# ----------------
+# Startup 
+# -------
 font pango:Source Code Pro Medium for Powerline
-# Start compositor (for terminal transparency) 
+# Start compositor 
 exec compton --config ~/.config/compton.conf                        
-# Set desktop wallpaper
+# Wallpaper
 exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg    
-# Makes mouse dissapear if not used recently 
+# Hide mouse if not in use
 exec --no-startup-id unclutter                                      
 
-# User applications
-# -----------------
-set $browser                    firefox                             
+set $browser                    icecat
 set $term                       urxvt                               
 set $torrent                    rtorrent                            
 set $fileman                    ranger                              
@@ -23,9 +21,42 @@ set $launcher                   rofi -show run
 set $mail                       neomutt
 set $music                      ncmpcpp
 set $mod                        Mod4
+set $launch                     iceweasel
+set $screensaver                xlock
+set $keylock                    xtrlock
+set $networkman                 nmtui 
+set $inc_volume                 --no-startup-id pamixer --allow-boost -i 5 
+set $dec_volume                 --no-startup-id pamixer --allow-boost -d 5 
+set $mute_volume                --no-startup-id pamixer --allow-boost -t
+
 floating_modifier               $mod
   
-# Window settings
+# Keybindings
+# ----------------
+bindsym $mod+r                  exec $term -e $fileman              
+bindsym $mod+Shift+r            exec $term -e sudo $fileman          
+bindsym $mod+w                  exec $browser                       
+bindsym $mod+e                  exec $term -e $mail                 
+bindsym $mod+Return             exec $term                          
+bindsym $mod+q                  kill                                
+bindsym $mod+d                  exec $launcher                      
+
+bindsym $mod+Shift+c            reload                              
+bindsym $mod+Shift+Delete       restart                             
+#bindsym $mod+Shift+End         shutdown
+#bindsym $mod+Shift+r           reboot
+
+# XF86 Keybindings
+# ----------------
+bindsym XF86AudioRaiseVolume    exec $inc_volume
+bindsym XF86AudioLowerVolume    exec $dec_volume
+bindsym XF86AudioMute           exec $mute_volume
+bindsym XF86Launch1             exec $keylock
+bindsym XF86ScreenSaver         exec $screensaver
+bindsym $mod+F2                 exec $screensaver
+bindsym $mod+F5                 exec $term -e $networkman
+
+# Window 
 # ---------------
 workspace $ws1                  output DVI-D-1 
 workspace $ws2                  output HDMI-1 
@@ -46,7 +77,7 @@ bindsym $mod+h                  split h
 bindsym $mod+v                  split v                
 bindsym $mod+f                  fullscreen toggle       
 
-bindsym $mod+t                  layout tabbed
+#bindsym $mod+t                  layout tabbed
 bindsym $mod+Shift+e            layout toggle split
 bindsym $mod+Shift+space        floating toggle
 
@@ -60,25 +91,25 @@ bindsym $mod+Shift+i            resize grow height 10px
 bindsym $mod+Shift+o            resize grow width 10px 
 
 bar {
-    status_command i3status -c ~/.config/i3status/config 
+    status_command i3status -c ~/.config/i3status/config.laptop
     font pango: Source Code Pro Variable for Powerline 8
     position top
 }
 
-# Gap settings
+# Gaps 
 # ------------
-gaps inner                      40
-gaps outer                      60 
+gaps inner                      20
+gaps outer                      10 
 
 bindsym $mod+s                  gaps inner current plus 10
 bindsym $mod+Shift+s            gaps inner current minus 10
 bindsym $mod+x                  gaps outer current plus 10
 bindsym $mod+Shift+x            gaps outer current minus 10
 bindsym $mod+g                  gaps outer current set 0; gaps inner current set 0 
-bindsym $mod+Shift+g            gaps outer current plus 40; gaps inner current plus 40
+bindsym $mod+Shift+g            gaps outer current plus 20; gaps inner current plus 10 
 
 
-# Workspace settings
+# Workspace 
 # ------------------
 set $ws1                        "1: web"
 set $ws2                        "2: term"
@@ -120,6 +151,8 @@ workspace $ws3                  gaps inner 0
 workspace $ws3                  gaps outer 0
 
 for_window [class="Firefox"]    move to workspace $ws1
+for_window [class="Chromium"]    move to workspace $ws1
+for_window [class="Iceweasel"]    move to workspace $ws1
 for_window [title="ncmpcpp"]    move to workspace $ws3
 for_window [title="mpsyt"]      move to workspace $ws3
 for_window [class="mpv"]        move to workspace $ws3
@@ -128,28 +161,7 @@ for_window [title="neomutt"]    move to workspace $ws4
 for_window [class="Blender"]    move to workspace $ws8
 for_window [class="Gimp"]       move to workspace $ws9
 
-
-# User keybindings
-# ----------------
-# Open file manager 
-bindsym $mod+r                  exec $term -e $fileman              
-bindsym $mod+Shift+r            exec $term -e sudo $fileman          
-# Open browser
-bindsym $mod+w                  exec $browser                       
-# Run mail client
-bindsym $mod+e                  exec $term -e $mail                 
-# Run terminal
-bindsym $mod+Return             exec $term                          
-# Kill focused window
-bindsym $mod+q                  kill                                
-# Run program launcher  
-bindsym $mod+d                  exec $launcher                      
-# reload the configuration file
-bindsym $mod+Shift+c            reload                              
-# restart i3 inplace 
-bindsym $mod+Shift+Delete       restart                             
-
-# Color Scheme
+# Color 
 # ------------
 set $base00                     #181818
 set $base01                     #282828

@@ -20,7 +20,7 @@ fc-cache -fv
 
 # Configure urxvt and zsh
 xrdb -load ~/.Xresources 
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+cd ~/ && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
 # Install texlive, my LaTeX distrubution of choice
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -41,6 +41,5 @@ echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
 cat ips >> /etc/hosts # Anti ads, analytics, trackers, non-RYF sites
 
 # Setup NetworkManager, nmcli/nmtui for eth/wifi management  
-systemctl enable NetworkManager
-systemctl start NetworkManager
+#systemctl enable NetworkManager
 

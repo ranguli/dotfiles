@@ -1,9 +1,7 @@
-export EDITOR=nvim
-
+export EDITOR=vim
 
 # Aliases:
-alias vim='nvim'
-alias vi='nvim'
+alias vi='vim'
 alias i3c='vim ~/.config/i3/config'
 
 export ZSH=/home/joshua/.oh-my-zsh/

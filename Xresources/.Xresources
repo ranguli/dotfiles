@@ -3,10 +3,8 @@
 ! Github: https://github.com/ranguli/dotfiles
 ! Config file for X11 terminals, such as urxvt
 
-URxvt*font: xft:Source Code Pro for Powerline:style=medium:size=9
-
-URxvt.letterSpace: -1
 URxvt.scrollBar: false
+URxvt.boldFont:
 URxvt.depth: 32
 !URxvt*background: rgba:0000/0000/0200/c000
 
