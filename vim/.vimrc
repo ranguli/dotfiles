@@ -9,13 +9,12 @@
 "    GitHub: www.github.com/ranguli/dotfiles
 "    2017
 
+set nocompatible                
 filetype plugin indent on       
-filetype plugin on
-set syntax
+"set syntax
 "set t_Co=256
 set t_md=
 set rtp+=$HOME/.vim/bundle/Vundle.vim
-set nocompatible                
 set tw=79
 set tabstop=4                   
 set shiftwidth=4                " A tab is just simply 4 spaces.
@@ -65,18 +64,19 @@ endif
 call plug#begin()
 
 Plug  'raimondi/delimitmate'
+Plug  'artur-shaik/vim-javacomplete2'
 Plug  'chriskempson/base16-vim'
 Plug  'tpope/vim-fugitive'
 Plug  'tpope/vim-surround'
 Plug  'lsdr/monokai'
-Plug  'Valloric/YouCompleteMe' " Code completion
+"Plug  'Valloric/YouCompleteMe' " Code completion
 Plug  'scrooloose/syntastic'   " Syntax checking
 Plug  'scrooloose/nerdtree'    " File tree
 Plug  'tpope/vim-surround'     
 Plug  'majutsushi/tagbar'
 Plug  'vim-airline/vim-airline'
 Plug  'vim-airline/vim-airline-themes'
-Plug  'xolox/vim-easytags'
+"Plug  'xolox/vim-easytags'
 Plug  'xolox/vim-misc'
 Plug 'scrooloose/nerdcommenter'
 Plug 'yuttie/comfortable-motion.vim'
@@ -84,3 +84,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/goyo.vim'
 
 call plug#end()            
+
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
