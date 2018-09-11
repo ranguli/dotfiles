@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal dotfiles. Previously for Ubuntu/Fedora but now for Manjaro, with GNU Stow support.
+My personal dotfiles. Previously for Ubuntu/Fedora but now for Manjaro/Parabola and Trisquel, with GNU Stow support.
 
 ## Install & Usage:
 Install `stow` and `git` then:
