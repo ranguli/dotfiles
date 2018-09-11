@@ -1,10 +1,10 @@
-export EDITOR=vim
+export EDITOR=nvim
 
 # Aliases:
 alias vi='vim'
 alias i3c='vim ~/.config/i3/config'
 
-export ZSH=/home/joshua/.oh-my-zsh/
+export ZSH=/home/joshua/.oh-my-zsh
 PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
 MANPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$MANPATH
 INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
@@ -100,3 +100,4 @@ source $ZSH/oh-my-zsh.sh
 #
 # Enables vi mode in zsh
 #bindkey -v
+
