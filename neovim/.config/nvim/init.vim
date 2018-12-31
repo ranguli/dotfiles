@@ -7,7 +7,7 @@
 "
 "    Author: ranguli
 "    GitHub: www.github.com/ranguli/dotfiles
-"    2017
+"    2019
 
 filetype plugin indent on       
 filetype plugin on
@@ -26,6 +26,10 @@ set clipboard=unnamedplus       " Use system clipboard
 set tags=tags;/                 " Allow vim to find ctags even in subdirs" 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:tex_conceal = ""
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+set guicursor=
+
 set nobackup                    " Make swap files go away 
 set nowritebackup
 set noswapfile
@@ -52,7 +56,7 @@ nmap <F5> :NERDTreeToggle<CR>
 nmap <F1> :Goyo<CR>
 
 "Ensure that vim-plug is installed
-if empty(glob('~/.vim/autoload/plug.vim'))
+if empty(glob('~/.config/nvim/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
