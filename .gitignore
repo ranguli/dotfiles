@@ -12,3 +12,7 @@ install-tl-20180224/
 ovpn_tcp
 ovpn_udp
 weechat/.weechat/weechat.log
+id_rsa
+id_rsa.pub
+known_hosts
+authorized_keys
