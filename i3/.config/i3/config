@@ -6,30 +6,26 @@
 # Startup 
 # -------
 font pango:Source Code Pro Medium for Powerline
-# Start compositor 
-exec compton --config ~/.config/compton.conf                        
-# Wallpaper
-exec feh --bg-scale ~/dotfiles/wallpapers/jon-flobrant-49795.jpg    
 # Hide mouse if not in use
 exec --no-startup-id unclutter                                      
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
+exec_always --no-startup-id wal -i ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
+exec --no-startup-id ~/dotfiles/scripts/xcape.sh
 
-set $browser                    icecat
+set $browser                    firefox 
 set $term                       urxvt                               
-set $torrent                    rtorrent                            
 set $fileman                    ranger                              
 set $launcher                   rofi -show run                                
-set $mail                       neomutt
 set $music                      ncmpcpp
 set $mod                        Mod4
-set $launch                     iceweasel
-set $screensaver                xlock
-set $keylock                    xtrlock
 set $networkman                 nmtui 
 set $inc_volume                 --no-startup-id pamixer --allow-boost -i 5 
 set $dec_volume                 --no-startup-id pamixer --allow-boost -d 5 
 set $mute_volume                --no-startup-id pamixer --allow-boost -t
 
 floating_modifier               $mod
+
   
 # Keybindings
 # ----------------
@@ -90,12 +86,6 @@ bindsym $mod+Shift+u            resize shrink height 10px
 bindsym $mod+Shift+i            resize grow height 10px 
 bindsym $mod+Shift+o            resize grow width 10px 
 
-bar {
-    status_command i3status -c ~/.config/i3status/config.laptop
-    font pango: Source Code Pro Variable for Powerline 8
-    position top
-}
-
 # Gaps 
 # ------------
 gaps inner                      20
@@ -149,35 +139,4 @@ workspace $ws2                  gaps inner 0
 workspace $ws2                  gaps outer 0
 workspace $ws3                  gaps inner 0
 workspace $ws3                  gaps outer 0
-
-for_window [class="Firefox"]    move to workspace $ws1
-for_window [class="Chromium"]    move to workspace $ws1
-for_window [class="Iceweasel"]    move to workspace $ws1
-for_window [title="ncmpcpp"]    move to workspace $ws3
-for_window [title="mpsyt"]      move to workspace $ws3
-for_window [class="mpv"]        move to workspace $ws3
-for_window [title="weechat"]    move to workspace $ws4
-for_window [title="neomutt"]    move to workspace $ws4
-for_window [class="Blender"]    move to workspace $ws8
-for_window [class="Gimp"]       move to workspace $ws9
-
-# Color 
-# ------------
-set $base00                     #181818
-set $base01                     #282828
-set $base02                     #383838
-set $base03                     #585858
-set $base04                     #b8b8b8
-set $base05                     #d8d8d8
-set $base06                     #e8e8e8
-set $base07                     #f8f8f8
-set $base08                     #ab4642
-set $base09                     #dc9656
-set $base0A                     #f7ca88
-set $base0B                     #a1b56c
-set $base0C                     #86c1b9
-set $base0D                     #7cafc2
-set $base0E                     #ba8baf
-set $base0F                     #a16946
-# Base16 Default Dark (Chris Kempson: http://chriskempson.com)
 
