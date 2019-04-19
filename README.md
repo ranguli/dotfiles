@@ -1,7 +1,7 @@
 # dotfiles
 My personal dotfiles.
-[!image](void_i3.png)
-_My i3 setup in Void Linux running on my Librebooted Thinkpad X200_
+![image](void_i3.png)
+_My i3 setup in Void Linux running on my Thinkpad X200_
 
 ## Install & Usage:
 Install `stow` and `git` then:
