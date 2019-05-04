@@ -21,10 +21,10 @@ conky.config = {
 conky.text = [[
 $hr
 ${execi 90 python ~/Projects/conky-darksky/conky-darksky.py} 
-${color2}${exec cat ~/Projects/conky-darksky/.conky-darksky | sed -n 1p}
-${exec cat ~/Projects/conky-darksky/.conky-darksky | sed -n 2p}
-${color1}Temperature: ${color2}${exec cat ~/Projects/conky-darksky/.conky-darksky | sed -n 4p}° Celcius 
-${color1}Wind Speed: ${color2}${exec cat ~/Projects/conky-darksky/.conky-darksky | sed -n 6p}km/h
+${color2}${exec cat ~/.conky-darksky | sed -n 1p}
+${exec cat ~/.conky-darksky | sed -n 2p}
+${color1}Temperature: ${color2}${exec cat ~/.conky-darksky | sed -n 4p}° Celcius 
+${color1}Wind Speed: ${color2}${exec cat ~/.conky-darksky | sed -n 6p}km/h
 
 $hr
 ${color1}Uptime:$color $uptime
@@ -48,7 +48,7 @@ ${color} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 
-${color1}CPU: ${color}${hwmon 3 temp 2}°C ${color1}SSD: ${color}${exec hddtemp /dev/sda | awk '{print $NF}'} ${color1}Fan Speed: ${color}${hwmon 2 fan 1}RPM
+${color1}CPU: ${color}${hwmon 3 temp 1}°C ${color1}SSD: ${color}${exec hddtemp /dev/sda | awk '{print $NF}'} ${color1}Fan Speed: ${color}${hwmon 2 fan 1}RPM
 ${color2}${cpugraph 100,260 -t} ${goto 200}
 ${color2}${memgraph 100,260 -t}
 ${color2 }${downspeedgraph wlp61s0 100,260 -t}

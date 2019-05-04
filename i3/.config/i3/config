@@ -12,7 +12,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
 exec_always --no-startup-id wal -i ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
 exec_always --no-startup-id ~/dotfiles/scripts/xcape.sh
-exec_always --no-startup-id wicd-gtk --tray 
 
 set $browser                    google-chrome-stable 
 set $term                       kitty 
