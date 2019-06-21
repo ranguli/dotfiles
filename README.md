@@ -7,6 +7,6 @@ My dotfiles, scripts and downstream forks + patches.
 ## Install & Usage:
 Install `stow` and `git` then:
 
-`git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow package`
+`git clone https://github.com/ranguli/gentoo && cd ./gentoo && stow package`
 
 
