@@ -1,0 +1,3 @@
+# UNIVERSAL
+
+EDITOR=vim

@@ -1,12 +1,9 @@
-# gentoo
-My dotfiles, scripts and downstream forks + patches.
+<p align="center">
+  <img width="460" height="100" src="https://i.imgur.com/oht64qb.gif">
+</p>
 
-![image](void_i3.png)
-_My i3 setup in Void Linux running on my Thinkpad X200_
+_best suited for:_
 
-## Install & Usage:
-Install `stow` and `git` then:
-
-`git clone https://github.com/ranguli/dotfiles && cd ./dotfiles && stow package`
-
-
+```
+Linux jack-bluebook 4.19.49-1-MANJARO #1 SMP PREEMPT Sun Jun 9 20:24:20 UTC 2019 x86_64 GNU/Linux
+```
