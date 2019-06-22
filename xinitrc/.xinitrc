@@ -5,7 +5,7 @@
 # Github: https://github.com/ranguli/dotfiles
 # Configures what to do when X11 starts. 
 
-exec i3
+exec dwm 
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap

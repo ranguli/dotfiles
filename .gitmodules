@@ -1,0 +1,3 @@
+[submodule "src/vim"]
+	path = src/vim
+	url = git@github.com:ranguli/vim.git
