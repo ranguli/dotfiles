@@ -1,4 +1,14 @@
+#!/bin/sh
+
+# Dotfiles - autostart.sh 
+# Author: Joshua Murphy
+# Github: https://github.com/ranguli/gentoo
+# Autorun script when dwm starts 
+
 xrdb -load ~/.Xresources
+
+dunst&
+./xcape.sh
 
 function eth_info {
     eth_nic=enp0s31f6
@@ -14,14 +24,15 @@ function wlan_info {
     ssid=$(iw dev | grep ssid | sed 's/ssid//g' | tr -d ' \t')
     ssid_strength=$(cat /proc/net/wireless | awk 'NR==3 {print $3}' | tr -d '.')%
     wlan_ip=$(ip addr | grep $wlan_nic | grep inet | awk '{print $2}')
-    echo "$wlan_nic: $ssid $ssid_strength $wlan_ip |"
+    if [[ $wlan_ip]]
+    then
+        echo "$wlan_nic: $ssid $ssid_strength $wlan_ip |"
+    fi
 }
-
 
 function get_backlight {
     backlight=$(xbacklight -get | awk '{print int($1)}')
     echo "Backlight: $backlight% |"
-	
 }
 
 while : 
