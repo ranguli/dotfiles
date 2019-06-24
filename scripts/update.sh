@@ -1,5 +1,5 @@
 #!/bin/sh
-    echo "Run as root!"
+echo "Run as root!"
 emerge --sync
 emerge -avuDN --with-bdeps=y @world
 etc-update
