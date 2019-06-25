@@ -1,0 +1,6 @@
+sudo systemctl enable powertop 
+powertop --calibrate
+powertop --auto-tune
+sudo su root
+echo "blacklist pcspkr" > /etc/modeprobe.d/nobeep.conf # Disable PC speaker
+
