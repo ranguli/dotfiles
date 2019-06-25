@@ -1,0 +1,131 @@
+# Dotfiles - i3 config
+# Author: Joshua Murphy
+# Github: https://github.com/ranguli/dotfiles
+# Config file for the i3 tiling wm (running the i3-gaps fork)
+
+# Startup 
+# -------
+font pango:Source Code Pro Medium for Powerline
+# Hide mouse if not in use
+exec_always --no-startup-id unclutter                                      
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
+exec_always --no-startup-id wal -i ~/dotfiles/wallpapers/ofas72yn1kt01.jpg
+exec_always --no-startup-id ~/dotfiles/scripts/xcape.sh
+
+set $browser                    google-chrome-stable 
+set $term                       kitty 
+set $fileman                    ranger                              
+set $launcher                   rofi -show run                                
+set $music                      ncmpcpp
+set $mod                        Mod4
+set $networkman                 nmtui 
+
+floating_modifier               $mod
+
+  
+# Keybindings
+# ----------------
+bindsym $mod+r                  exec $term -e $fileman              
+bindsym $mod+Shift+r            exec $term -e sudo $fileman          
+bindsym $mod+w                  exec $browser                       
+bindsym $mod+e                  exec $term -e $mail                 
+bindsym $mod+Return             exec $term                          
+bindsym $mod+q                  kill                                
+bindsym $mod+d                  exec $launcher                      
+
+bindsym $mod+Shift+c            reload                              
+bindsym $mod+Shift+Delete       restart                             
+#bindsym $mod+Shift+End         shutdown
+#bindsym $mod+Shift+r           reboot
+
+bindsym F1			exec --no-startup-id pactl set-sink-mute   0 toggle
+bindsym F2			exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym F3			exec --no-startup-id pactl set-sink-volume 0 +5%
+
+bindsym F5			exec --no-startup-id xbacklight -dec 10 
+bindsym F6			exec --no-startup-id xbacklight -inc 10 
+
+bindsym XF86Launch1             exec $keylock
+bindsym XF86ScreenSaver         exec $screensaver
+bindsym $mod+F2                 exec $screensaver
+bindsym $mod+F5                 exec $term -e $networkman
+
+# Window 
+# ---------------
+new_window pixel                4                                  
+
+bindsym $mod+j                  focus left    
+bindsym $mod+k                  focus down     
+bindsym $mod+l                  focus up        
+bindsym $mod+semicolon          focus right      
+
+bindsym $mod+Shift+j            move left         
+bindsym $mod+Shift+k            move down          
+bindsym $mod+Shift+l            move up             
+bindsym $mod+Shift+semicolon    move right           
+
+bindsym $mod+h                  split h               
+bindsym $mod+v                  split v                
+bindsym $mod+f                  fullscreen toggle       
+
+#bindsym $mod+t                  layout tabbed
+bindsym $mod+Shift+e            layout toggle split
+bindsym $mod+Shift+space        floating toggle
+
+bindsym $mod+space              focus mode_toggle
+bindsym $mod+a                  focus parent
+bindsym $mod+Shift+d            focus child
+
+bindsym $mod+Shift+y            resize shrink width 10px 
+bindsym $mod+Shift+u            resize shrink height 10px 
+bindsym $mod+Shift+i            resize grow height 10px 
+bindsym $mod+Shift+o            resize grow width 10px 
+
+# Gaps 
+# ------------
+gaps inner 20
+gaps outer 10
+
+bindsym $mod+s                  gaps inner current plus 10
+bindsym $mod+Shift+s            gaps inner current minus 10
+bindsym $mod+x                  gaps outer current plus 10
+bindsym $mod+Shift+x            gaps outer current minus 10
+bindsym $mod+g                  gaps outer current set 0; gaps inner current set 0 
+bindsym $mod+Shift+g            gaps outer current plus 20; gaps inner current plus 10 
+
+
+# Workspace 
+# ------------------
+set $ws1                        "1: web"
+set $ws2                        "2: term"
+set $ws3                        "3: ssh + music"
+set $ws4                        "4: mail + chat"
+set $ws6                        "5"
+set $ws7                        "6"
+set $ws8                        "7: misc"
+set $ws9                        "8: misc"
+set $ws10                       "9: misc"
+
+bindsym $mod+1                  workspace $ws1
+bindsym $mod+2                  workspace $ws2
+bindsym $mod+3                  workspace $ws3
+bindsym $mod+4                  workspace $ws4
+bindsym $mod+5                  workspace $ws5
+bindsym $mod+6                  workspace $ws6
+bindsym $mod+7                  workspace $ws7
+bindsym $mod+8                  workspace $ws8
+bindsym $mod+9                  workspace $ws9
+bindsym $mod+0                  workspace $ws10
+
+bindsym $mod+Shift+1            move container to workspace $ws1 
+bindsym $mod+Shift+2            move container to workspace $ws2 
+bindsym $mod+Shift+3            move container to workspace $ws3 
+bindsym $mod+Shift+4            move container to workspace $ws4 
+bindsym $mod+Shift+5            move container to workspace $ws5 
+bindsym $mod+Shift+6            move container to workspace $ws6 
+bindsym $mod+Shift+7            move container to workspace $ws7 
+bindsym $mod+Shift+8            move container to workspace $ws8 
+bindsym $mod+Shift+9            move container to workspace $ws9 
+bindsym $mod+Shift+0            move container to workspace $ws10 
+
