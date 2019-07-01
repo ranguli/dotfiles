@@ -1,6 +1,9 @@
 [submodule "src/vim"]
 	path = src/vim
 	url = git@github.com:ranguli/vim.git
-[submodule "src/dunst"]
-	path = src/dunst
-	url = https://github.com/dunst-project/dunst
+[submodule "src/dmenu"]
+	path = src/dmenu
+	url = git@github.com:ranguli/dmenu
+[submodule "src/st"]
+	path = src/st
+	url = git@github.com:ranguli/st
