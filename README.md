@@ -1,8 +1,6 @@
 # gentoo
 My dotfiles, scripts and downstream forks + patches.
 
-![image](void_i3.png)
-
 ## Dependencies
 - `sys-apps/xbacklight` for backlight control
 - `sys-apps/xsetroot` for changing the status bar
