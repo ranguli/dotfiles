@@ -60,6 +60,7 @@ call plug#begin()
 "Plug 'junegunn/goyo.vim'
 "Plug 'scrooloose/nerdcommenter'
 "Plug 'scrooloose/syntastic'   " Syntax checking
+Plug 'ycm-core/YouCompleteMe' " Auto completion
 Plug 'scrooloose/nerdtree'    " File tree
 Plug 'tpope/vim-surround'     
 Plug 'majutsushi/tagbar'
