@@ -13,6 +13,8 @@ set clipboard=unnamedplus       " Use system clipboard
 set tags=tags;/                 " Allow vim to find ctags even in subdirs" 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+colorscheme industry
+
 " Make swap files go away 
 set nobackup
 set nowritebackup
