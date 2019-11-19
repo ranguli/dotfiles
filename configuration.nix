@@ -10,6 +10,10 @@
       ./hardware-configuration.nix
     ];
 
+  # Enable virtualization for virtualbox
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["joshua"];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -49,7 +53,6 @@
      # dev tools
      vim
      python3
-     virtualbox
      vagrant
      vscode
     
