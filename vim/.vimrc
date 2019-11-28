@@ -3,6 +3,9 @@
 filetype plugin indent on       
 
 set nocompatible                
+filetype plugin indent on
+syntax enable
+
 set t_md=
 set tw=79
 set tabstop=4                   
@@ -11,9 +14,8 @@ set expandtab
 set number
 set clipboard=unnamedplus       " Use system clipboard 
 set tags=tags;/                 " Allow vim to find ctags even in subdirs" 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
-colorscheme industry
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " Make swap files go away 
 set nobackup
@@ -66,5 +68,9 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'chriskempson/base16-vim'
 
-call plug#end()            
+call plug#end()
+
+colorscheme base16-darktooth
