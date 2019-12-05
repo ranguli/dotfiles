@@ -1,0 +1,8 @@
+alt + shift + Return
+    alacritty
+
+ctrl + q
+    bspc window -c
+
+super + w
+    firefox
