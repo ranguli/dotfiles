@@ -10,31 +10,22 @@
       ./hardware-configuration.nix
     ];
 
+  nix.nixPath = [
+    "nixos-config=/home/joshua/dotfiles/nixos/configuration.nix"
+  ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "eurydices"; # Define your hostname.
+  networking.hostName = "eurydices";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp61s0.useDHCP = true;
   networking.interfaces.enp0s20f0u2.useDHCP = true;
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
+  virtualisation.virtualbox.host.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/St_Johns";
@@ -42,16 +33,13 @@
   # Set zsh as shell 
   programs.zsh.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  
   environment.systemPackages = with pkgs; [
      # dev tools
      vim
      python3
-     virtualbox
      vagrant
      vscode
+     go
     
      # games 
      minecraft
@@ -94,22 +82,6 @@
     allowUnfree = true; # I couldn't get it to only allow specific packages :(
   };
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -126,13 +98,11 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable Gnome 3
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = false;
   services.xserver.desktopManager.gnome3.enable = true;
-  #services.xserver.windowManager.i3.enable = true;
 
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
@@ -142,7 +112,7 @@
     isNormalUser = true;
     home = "/home/joshua";
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "docker" "vboxusers"]; # Enable ‘sudo’ for the user.
   };
 
   # This value determines the NixOS release with which your system is to be
