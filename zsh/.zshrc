@@ -6,6 +6,7 @@ ZSH_THEME="robbyrussell"
 # This fixes a nasty issue whereby installing pipenv on Ubuntu
 # via apt would actually *break* pip: https://github.com/pypa/pipenv/issues/2122
 export PATH="${HOME}/.local/bin:$PATH"
+export PATH="${HOME}/.poetry/bin:$PATH"
 
 alias tmux="tmux -2"
 
