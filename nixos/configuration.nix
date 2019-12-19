@@ -12,6 +12,7 @@
 
   nix.nixPath = [
     "nixos-config=/home/joshua/dotfiles/nixos/configuration.nix"
+    "nixpkgs=/home/joshua/nixos/nixpkgs"
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -20,6 +21,9 @@
 
   networking.hostName = "eurydices";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  network.firewall.enable = true;
+  network.firewall.allowedTCPPorts = [ 21 ];
 
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp61s0.useDHCP = true;
