@@ -10,20 +10,12 @@
       ./hardware-configuration.nix
     ];
 
-  nix.nixPath = [
-    "nixos-config=/home/joshua/dotfiles/nixos/configuration.nix"
-    "nixpkgs=/home/joshua/nixos/nixpkgs"
-  ];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "eurydices";
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  network.firewall.enable = true;
-  network.firewall.allowedTCPPorts = [ 21 ];
 
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp61s0.useDHCP = true;
@@ -44,17 +36,21 @@
      vagrant
      vscode
      go
+     hugo
     
      # games 
      minecraft
      xonotic
+     lutris
+     ezquake
+     steam
+
 
      # apps
      firefox
      slack
      discord
      spotify
-     steam
      alacritty
      weechat
      gimp
@@ -80,6 +76,8 @@
      gnome3.gnome-tweaks
      gnome3.gnome-tweak-tool
      jre
+     wine
+     unzip
   ];
 
   nixpkgs.config = {
