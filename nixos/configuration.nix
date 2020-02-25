@@ -10,10 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  nix.nixPath = [
-    "nixos-config=/home/joshua/dotfiles/nixos/configuration.nix"
-  ];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -40,17 +36,21 @@
      vagrant
      vscode
      go
+     hugo
     
      # games 
      minecraft
      xonotic
+     lutris
+     ezquake
+     steam
+
 
      # apps
      firefox
      slack
      discord
      spotify
-     steam
      alacritty
      weechat
      gimp
@@ -76,6 +76,8 @@
      gnome3.gnome-tweaks
      gnome3.gnome-tweak-tool
      jre
+     wine
+     unzip
   ];
 
   nixpkgs.config = {
