@@ -4,14 +4,16 @@
 ! Config file for X11 terminals, such as urxvt
 
 URxvt.scrollBar: false
-URxvt.boldFont:
-URxvt.depth: 32
 !URxvt*background: rgba:0000/0000/0200/c000
 
 xterm*VT100.Translations: #override \
 	Crtl Shift <Key>V: 	insert-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>C:	copy-selection(CLIPBOARD)
 
+URxvt.font: -misc-fixed-medium-r-normal--14-*-*-*-*-*-*-*
+!URxvt.font: -misc-fixed-medium-r-normal--14-110-100-100-c-70-iso8859-1
+URxvt.letterSpace: -1
+ 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary
 *color16:      base09
@@ -77,14 +79,25 @@ URxvt*borderColor:  [100]#0D1B1E
 *.color66: #0D1B1E
 *color66:  #0D1B1E
 
-! Xclock colors.
-XClock*foreground: #adc2c0
-XClock*background: #0D1B1E
-XClock*majorColor:  rgba:ad/c2/c0/ff
-XClock*minorColor:  rgba:ad/c2/c0/ff
-XClock*hourColor:   rgba:ad/c2/c0/ff
-XClock*minuteColor: rgba:ad/c2/c0/ff
-XClock*secondColor: rgba:ad/c2/c0/ff
+URxvt.depth: 32
 
-! Set depth to make transparency work.
-URxvt*depth: 32
+
+URxvt.perl-ext-common: default,resize-font,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o selection clipbaord
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-U: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLS: true
+URxvt.urlButton: 1
+
+
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-slash:  font-size:show
