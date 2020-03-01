@@ -40,6 +40,8 @@ nmap <F8> :TagbarToggle<CR>
 nmap <F7> :UpdateTags<CR>
 nmap <F5> :NERDTreeToggle<CR>
 
+" Delete whitespace on :w
+autocmd BufWritePre * %s/\s\+$//e
 
 " Goyo
 "nmap <F1> :Goyo<CR>
