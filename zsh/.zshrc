@@ -102,3 +102,12 @@ source $ZSH/oh-my-zsh.sh
 xrdb -load ~/.Xresources
 
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/usr/local/go/bin
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/joshua/.sdkman"
+[[ -s "/home/joshua/.sdkman/bin/sdkman-init.sh" ]] && source "/home/joshua/.sdkman/bin/sdkman-init.sh"
+
+eval "$(pyenv init -)"
+export PATH=$PATH:/snap/bin
+

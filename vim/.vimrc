@@ -1,23 +1,22 @@
-"set syntax
-"set t_Co=256
-filetype plugin indent on       
-
-set nocompatible                
 filetype plugin indent on
+
+set nocompatible
 syntax enable
 
 set t_md=
 set tw=79
-set tabstop=4                   
+set tabstop=4
 set shiftwidth=4                " A tab is just simply 4 spaces.
 set expandtab
 set number
-set clipboard=unnamedplus       " Use system clipboard 
-set tags=tags;/                 " Allow vim to find ctags even in subdirs" 
+set clipboard=unnamedplus       " Use system clipboard
+set tags=tags;/                 " Allow vim to find ctags even in subdirs"
+
+:set guioptions-=T
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
-" Make swap files go away 
+" Make swap files go away
 set nobackup
 set nowritebackup
 set noswapfile
@@ -26,14 +25,14 @@ set noswapfile
 noremap <Space> :
 
 "Improve the way we move between panes
-noremap <C-l> <C-w>l 
-noremap <C-h> <C-w>h 
-noremap <C-j> <C-w>j 
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
 " Better code indentation in visual mode
-vnoremap < <gv 
-vnoremap > >gv 
+vnoremap < <gv
+vnoremap > >gv
 
 " Mapping to use Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -43,11 +42,6 @@ nmap <F5> :NERDTreeToggle<CR>
 " Delete whitespace on :w
 autocmd BufWritePre * %s/\s\+$//e
 
-" Goyo
-"nmap <F1> :Goyo<CR>
-" Automatically run Goyo for markdown files
-"au BufReadPost,BufNewFile *.md, :Goyo
-
 " Install vim-plug automatically
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -55,6 +49,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 call plug#begin()
 
@@ -63,16 +65,16 @@ call plug#begin()
 "Plug 'tpope/vim-surround'
 "Plug 'junegunn/goyo.vim'
 "Plug 'scrooloose/nerdcommenter'
-"Plug 'scrooloose/syntastic'   " Syntax checking
 Plug 'ycm-core/YouCompleteMe' " Auto completion
 Plug 'scrooloose/nerdtree'    " File tree
-Plug 'tpope/vim-surround'     
+Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chriskempson/base16-vim'
+Plug 'scrooloose/syntastic'
+Plug 'udalov/kotlin-vim'
+
 
 call plug#end()
-
-colorscheme base16-darktooth
