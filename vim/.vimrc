@@ -34,11 +34,6 @@ noremap <C-k> <C-w>k
 vnoremap < <gv
 vnoremap > >gv
 
-" Mapping to use Tagbar
-nmap <F8> :TagbarToggle<CR>
-nmap <F7> :UpdateTags<CR>
-nmap <F5> :NERDTreeToggle<CR>
-
 " Delete whitespace on :w
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -58,6 +53,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Mapping to use Tagbar
+nmap <F8> :TagbarToggle<CR>
+nmap <F7> :UpdateTags<CR>
+nmap <F5> :NERDTreeToggle<CR>
+
+
 call plug#begin()
 
 "Plug 'raimondi/delimitmate'
@@ -76,5 +77,12 @@ Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/syntastic'
 Plug 'udalov/kotlin-vim'
 
-
 call plug#end()
+
+if has('gui_running')
+    autocmd VimEnter * TagbarToggle
+    autocmd VimEnter * NERDTreeCWD
+    colorscheme base16-material
+    set lines=50 columns=150
+endif
+
