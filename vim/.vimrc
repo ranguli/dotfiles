@@ -76,6 +76,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/syntastic'
 Plug 'udalov/kotlin-vim'
+Plug 'sunkarapk/vim-dasm'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
