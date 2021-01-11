@@ -1,11 +1,19 @@
-# NixOS
+# dotfiles
 My dotfiles, scripts and downstream forks + patches.
 
-## Install
+## Usage
 
-For the first run of the NixOS config, run the following:
-```sudo nixos-rebuild switch -I nixos-config=/path/to/dotfiles/nixos/configuration.nix```
+### Clone
 
-Because the nix path is defined in the configuration file, you should only have to run the above command for the first time. After that you can just run:
+```bash
+git clone git@github.com:ranguli/dotfiles
+cd dotfiles/
+```
 
-```sudo nixos-rebuild switch```
+### Stow
+
+To install any particular dotfile, use `stow`. For example, to automatically copy my `.vimrc` to `~/.vimrc` and symlink the two together:
+
+```bash
+stow vim
+```
