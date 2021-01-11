@@ -61,24 +61,29 @@ nmap <F5> :NERDTreeToggle<CR>
 
 call plug#begin()
 
-"Plug 'raimondi/delimitmate'
-"Plug 'tpope/vim-fugitive'
+" IDE-like functions, file tree, tagbar, git, syntax checking
+Plug 'scrooloose/nerdtree'                              " File tree
+Plug 'majutsushi/tagbar'                                " Tags
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Fuzzy search
+Plug 'scrooloose/syntastic'                             " Syntax checking
+"Plug 'tpope/vim-fugitive'                              " Git integration
+"Plug 'ycm-core/YouCompleteMe'                          " Auto completion
 "Plug 'tpope/vim-surround'
-"Plug 'junegunn/goyo.vim'
+
+
+" Language/syntax hightlighting support
+"Plug 'sunkarapk/vim-dasm'                              " DASM assembler syntax
+"Plug 'udalov/kotlin-vim'                               " Kotlin support
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }     " Go support
+
+" Quality of life
+Plug 'yuttie/comfortable-motion.vim'                    " Smooth ctrl-D/U
+Plug 'airblade/vim-gitgutter'                           " Git diff in sidebar
+Plug 'junegunn/goyo.vim'                                " Reading mode
 "Plug 'scrooloose/nerdcommenter'
-Plug 'ycm-core/YouCompleteMe' " Auto completion
-Plug 'scrooloose/nerdtree'    " File tree
-Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Colors and theming
 Plug 'chriskempson/base16-vim'
-Plug 'scrooloose/syntastic'
-Plug 'udalov/kotlin-vim'
-Plug 'sunkarapk/vim-dasm'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 call plug#end()
 

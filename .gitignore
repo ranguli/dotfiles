@@ -16,3 +16,4 @@ id_rsa
 id_rsa.pub
 known_hosts
 authorized_keys
+.DS_Store
