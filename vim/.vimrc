@@ -11,7 +11,7 @@ set expandtab
 set number
 set clipboard=unnamedplus       " Use system clipboard
 set tags=tags;/                 " Allow vim to find ctags even in subdirs"
-
+set statusline+=%F\ %l\:%c
 :set guioptions-=T
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
