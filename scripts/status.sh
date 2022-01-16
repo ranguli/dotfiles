@@ -88,7 +88,7 @@ function wlan_info {
 
 while : 
 do
-    backlight=$(xbacklight -get | awk '{print int($1)}')
+    #backlight=$(xbacklight -get | awk '{print int($1)}')
     
     xsetroot -name "$(date) | $(wlan_info) $(eth_info) | Backlight: $backlight% | Volume: $(get_volume)% | Battery: $(get_battery)"
     sleep 0.5 

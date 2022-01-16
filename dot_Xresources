@@ -81,7 +81,6 @@ URxvt*borderColor:  [100]#0D1B1E
 
 URxvt.depth: 32
 
-
 URxvt.perl-ext-common: default,resize-font,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o selection clipbaord
@@ -94,3 +93,5 @@ URxvt.keysym.M-U: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLS: true
 URxvt.urlButton: 1
+
+Xcursor.size: 64

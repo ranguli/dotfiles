@@ -58,7 +58,6 @@ nmap <F8> :TagbarToggle<CR>
 nmap <F7> :UpdateTags<CR>
 nmap <F5> :NERDTreeToggle<CR>
 
-
 call plug#begin()
 
 " IDE-like functions, file tree, tagbar, git, syntax checking
@@ -93,4 +92,3 @@ if has('gui_running')
     colorscheme base16-material
     set lines=50 columns=150
 endif
-
