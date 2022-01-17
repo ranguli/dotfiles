@@ -73,7 +73,7 @@ Plug 'scrooloose/syntastic'                             " Syntax checking
 " Language/syntax hightlighting support
 "Plug 'sunkarapk/vim-dasm'                              " DASM assembler syntax
 "Plug 'udalov/kotlin-vim'                               " Kotlin support
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }     " Go support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }     " Go support
 
 " Quality of life
 Plug 'yuttie/comfortable-motion.vim'                    " Smooth ctrl-D/U
