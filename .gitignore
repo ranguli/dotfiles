@@ -1,19 +1,1 @@
-neovim/.config/nvim/
-neovim/neovim
-neovim/ctags
-logs/
-*.swp
-*.zip
-.oh-my-zsh/
-DejaVu Sans Mono for Powerline.ttf
-Source Code Pro Medium for Powerline.otf.1
-fontawesome-free-5.0.6/
-install-tl-20180224/
-ovpn_tcp
-ovpn_udp
 weechat/.weechat/weechat.log
-id_rsa
-id_rsa.pub
-known_hosts
-authorized_keys
-.DS_Store
